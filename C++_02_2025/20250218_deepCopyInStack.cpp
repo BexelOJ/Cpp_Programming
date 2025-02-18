@@ -19,9 +19,9 @@ public:
     Base(const Base& other) {
         cout << "Base Copy Constructor Called" << endl;
         // Deep copy for each member
-        a = other.a;
-        b = other.b;
-        c = other.c;
+        a = other.a +2;
+        b = other.b +2;
+        c = other.c +2;
     }
 
     // Display function
@@ -46,4 +46,17 @@ int main() {
 
     return 0;
 }
+
+
+
+/*
+Output:
+
+Base Constructor Called
+Base Copy Constructor Called
+b1: Inside Base Class
+a: 1, b: 2, c: 30
+b2: Inside Base Class
+a: 1, b: 2, c: 30
+*/
 

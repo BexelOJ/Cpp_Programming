@@ -37,6 +37,17 @@ int main() {
     b1->Display();
     b2->Display();
 
-    delete b1; // Frees the memory for b1 (and b2 points to the same memory)
+    delete b2; // Frees the memory for b1 (and b2 points to the same memory)
     return 0;
 }
+
+
+/*
+Output:
+
+Base Constructor Called
+a: 1, b: 2, c: 30
+a: 1, b: 2, c: 30
+Base Destructor Called
+*/
+

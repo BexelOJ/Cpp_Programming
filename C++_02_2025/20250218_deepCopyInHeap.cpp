@@ -20,9 +20,9 @@ public:
     // Deep Copy Constructor
     Base(const Base& other) {
         cout << "Base Copy Constructor Called (Deep Copy)" << endl;
-        a = new int(*(other.a));  // Deep copy the dynamically allocated memory
-        b = new int(*(other.b));  // Deep copy the dynamically allocated memory
-        c = other.c;
+        a = new int(*(other.a)+ 3);  // Deep copy the dynamically allocated memory
+        b = new int(*(other.b) + 3);  // Deep copy the dynamically allocated memory
+        c = other.c + 3;
     }
 
     // Destructor to free dynamically allocated memory
@@ -49,5 +49,16 @@ int main() {
     delete b2; // Free memory for b2
     return 0;
 }
+
+/*
+Output:
+
+Base Constructor Called
+Base Copy Constructor Called (Deep Copy)
+a: 1, b: 2, c: 30
+a: 4, b: 5, c: 33
+Base Destructor Called
+Base Destructor Called
+*/
 
 

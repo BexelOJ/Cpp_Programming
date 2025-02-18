@@ -28,3 +28,11 @@ int main() {
     b2.Display();
     return 0;
 }
+/*
+Output:
+
+Base Constructor Called
+a: 1, b: 2, c: 30
+a: 1, b: 2, c: 30
+*/
+

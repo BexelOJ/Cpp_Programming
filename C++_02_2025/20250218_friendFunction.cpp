@@ -1,29 +1,28 @@
 #include <iostream>
-
 using namespace std;
 
-class Box 
-{
+class Box {
 private:
-    double length;
+    int length;
+
 public:
-    Box() : length(10.0) {}
-    
-    // Friend function declaration
-    friend void printLength(Box b);
+    // Constructor to initialize length
+    Box(int len) : length(len) {}
+
+    // Declare a friend function
+    friend int calculateArea(Box b); // Friend function declaration
 };
 
 // Friend function definition
-void printLength(Box &b) 
-{
-    b.length = this;
-    cout << "Length of box: " << b.length << endl;  // Access private member
+int calculateArea(Box b) {
+    // Accessing private member of Box class
+    return b.length * b.length; // Area of square (length * length)
 }
 
-int main() 
-{
-    Box xy;
-    printLength(xy);  // Calling the friend function
+int main() {
+    Box box1(5); // Create an object of Box class
+    cout << "Area of Box: " << calculateArea(box1) << endl; // Calling friend function
+
     return 0;
 }
 
