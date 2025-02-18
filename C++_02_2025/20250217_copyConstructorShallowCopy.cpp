@@ -8,6 +8,7 @@ private:
     int b = 20;
 public: 
     int c = 30;
+    Base(){}
     Base(int x, int y) : a(x), b(y) {
         cout << "Base Constructor Called" << endl;
     }
@@ -21,8 +22,10 @@ public:
 
 int main() {
     // Create object on heap
-    Base* b3 = new Base(1, 2);
-
+    Base* b1 = new Base();
+    Base* b2 = new Base(1,2);
+    Base* b3 = new Base(3,4);
+    
     // Create another object and assign b3 to b4, invoking shallow copy
     Base* b4 = b3; // Shallow copy - both b3 and b4 point to the same object
 
@@ -31,7 +34,10 @@ int main() {
     b3->Display();
     cout << "b4: ";
     b4->Display();
-
+    b3->c=50;
+    cout<<b3->c<<endl;
+    cout<<b4->c+30<<endl;
+    //cout<<b3->a<<endl;
     // No need for explicit copy constructor because b4 is just another pointer to b3 (shallow copy)
     // Free the allocated memory
     delete b3;  // Deletes the object that both b3 and b4 point to

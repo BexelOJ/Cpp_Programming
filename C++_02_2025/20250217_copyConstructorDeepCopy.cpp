@@ -15,14 +15,13 @@ public:
     // Copy constructor (deep copy)
     Base(const Base& other) {
         cout << "Base Copy Constructor Called" << endl;
-        a = other.a;
-        b = other.b;
-        c = other.c;
+        a = (other.a+1);
+        b = (other.b+1);
+        c = (other.c+1);
     }
 
     void Display() {
-        cout << "Inside Base Class" << endl;
-        cout << a << " and " << b << endl;
+        cout << "Inside Base Class " <<a <<" " <<b <<" "<<c<<endl;
     }
 };
 
