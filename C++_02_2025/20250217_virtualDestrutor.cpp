@@ -23,3 +23,16 @@ int main() {
     
     return 0;
 }
+
+
+/*
+Output:
+
+Base class constructor
+Base class constructor
+Derived class constructor
+Base class destructor
+Derived class destructor
+Base class destructor
+*/
+
