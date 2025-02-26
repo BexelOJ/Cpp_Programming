@@ -33,4 +33,12 @@ b1.printMaxValue();
 return 0;
 }
 
+/*
+Output:
 
+Max Value: 100
+Max Value: 100
+100
+Max Value: 100
+
+*/
