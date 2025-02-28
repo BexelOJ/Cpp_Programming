@@ -18,6 +18,7 @@ int main()
 {
 string str = "Hello World!";
 char str2[] = "India is the best!";
+
 cout<<str<<endl;
 n = strlen(str2);
 for(int i=0; i<n; i++)
