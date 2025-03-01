@@ -25,3 +25,9 @@ return 0;
 }
 
 
+/*
+
+Number of One : 6
+Number of Zero : 6
+
+*/
