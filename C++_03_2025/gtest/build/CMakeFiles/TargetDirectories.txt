@@ -1,0 +1,3 @@
+/home/exin/Workspace/C++/C++_03_2025/gtest/build/CMakeFiles/test_add.dir
+/home/exin/Workspace/C++/C++_03_2025/gtest/build/CMakeFiles/edit_cache.dir
+/home/exin/Workspace/C++/C++_03_2025/gtest/build/CMakeFiles/rebuild_cache.dir
