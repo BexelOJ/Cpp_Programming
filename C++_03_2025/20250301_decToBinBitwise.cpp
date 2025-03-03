@@ -3,11 +3,9 @@ using namespace std;
 
 void decToBinBitwise(int n) 
 {
-    for (int i = 31; i >= 0; i--) {
-        // Shift the bit at position i to the rightmost bit
-        int bit = (n >> i) & 1;
-        cout << bit;
-    }
+    // Shift the bit at position i to the rightmost bit
+    for (int i=31; i>=0; i--)  
+        cout<<((n >> i) & 1);
     cout << endl;
 }
 

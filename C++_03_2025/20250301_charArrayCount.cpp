@@ -10,7 +10,7 @@ int n=0, one=0, zero=0;
 n= strlen(str);
 for(int i=0;i<n;i++)
 {
-    if(str[i] == '1')
+    if(str[i] == '1') // if(str[i]==48), if(str[i]=='1') if(str[i]==0x30)
     {
         one++;
     }
