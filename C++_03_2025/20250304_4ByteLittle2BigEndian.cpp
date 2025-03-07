@@ -14,7 +14,7 @@ int convert(int x)
         printf("Binary: %b\n", res);
         printf("Hex: %X\n", res);
         printf("Octal: %o\n", res);
-        printf("Decimal: %d\n", res);
+        printf
     }
     return 0;
 }
