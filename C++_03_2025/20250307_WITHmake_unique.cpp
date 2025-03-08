@@ -45,6 +45,9 @@ void ObjectInStack()
     cout << b3.a << " " << b3.b << endl;
     cout << b2.a << " " << b2.b << endl;
     cout << b1.a << " " << b1.b << endl;
+
+    Base b4(100);  // object b1 in Stack Memory
+    cout <<b4.a << endl;
 }
 
 void ObjectInHeap()
