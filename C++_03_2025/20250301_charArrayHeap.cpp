@@ -34,6 +34,6 @@ int main() {
 
     // Deallocate the memory to prevent memory leak
     delete[] str2;
-    //delete[] str3;
+    delete[] str3;
     return 0;
 }
