@@ -29,7 +29,7 @@ for(int i=1; i<size; i=i+2)
     }
     
 }
-for(int i=0; i<12; i++)
+for(int i=0; i<size; i++)
 {
     cout<<arr[i];
 }
@@ -37,4 +37,11 @@ cout<<endl;
 return 0;
 }
 
+
+/*
+
+110010101001
+100111111100
+
+*/
 
