@@ -17,7 +17,7 @@ public:
         // ptr = new int[size];
     }
 
-    Base(const Base& other)
+    Base(const Base &other)
     {
         cout << "Copy Constructor called " << endl;
         size = other.size;
@@ -56,3 +56,24 @@ int main()
 }
 
 
+/*
+OUTPUT:
+
+Default Constructor called 
+Parameterized Constructor called 
+Copy Constructor called 
+Copy Constructor called 
+Default Constructor called 
+Parameterized Constructor called 
+Copy Constructor called 
+Copy Constructor called 
+Destructor called 
+Destructor called 
+Destructor called 
+Destructor called 
+Destructor called 
+Destructor called 
+Destructor called 
+Destructor called
+
+*/
