@@ -33,13 +33,13 @@ Base *ptr = new Base(30,40,'f');
 
 display(b1);
 
-std::tuple<int ,int, char> res = ptr->show();
+tuple<int ,int, char> res = ptr->show();
 
 int l=0;
 int m=0;
 char n;
 
-std::tie(l, m, n) = res;
+tie(l, m, n) = res;
 cout<<l<<" "<<m<<" "<<n<<endl;
 return 0;
 }
