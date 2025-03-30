@@ -24,6 +24,9 @@ public:
 
     virtual void send(const std::string& message) = 0;
     virtual void receive(const std::string& message) = 0;
+
+    std::string getName() const { return name; }  // Add the getName() method
+
     virtual ~User() = default;
 };
 
