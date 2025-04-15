@@ -6,11 +6,13 @@ int main()
 {
 string str = "Manu Kumar of Bharat";
 cout<<str<<endl;
+// Manu Kumar of Bharat
 
 for(int i=0; i<str.size(); i++){
     cout<<str[i];
 }
 cout<<endl;
+// Manu Kumar of Bharat
 
 string str2;
 str2.resize(str.size());
