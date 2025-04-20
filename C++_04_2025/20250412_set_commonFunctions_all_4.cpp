@@ -19,11 +19,13 @@ int main()
     for (std::set<int>::iterator it = s.begin(); it != s.end(); ++it) {
     std::cout << *it << " ";
     }
+    cout<<endl;
+
     //Or with C++11 auto:
     for (auto it = s.begin(); it != s.end(); ++it) {
     std::cout << *it << " ";
     }
-
+    cout<<endl;
 
     return 0;
 }
