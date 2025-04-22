@@ -16,7 +16,8 @@ int main()
 int num=0;
 cout<<"Enter a Number:"<<endl;
 cin>>num;
-isPalindrome();
+Solution obj;
+obj.isPalindrome();
 
 return 0;
 }

@@ -9,7 +9,7 @@ public:
         int l1 = a.size();
         int l2 = b.size();
         string res = 0;
-        string carry = "0";
+        string carry = 1;
         for(int i=0; i<l1; i++){
             if(a[i] == b[i] == 1)
             {

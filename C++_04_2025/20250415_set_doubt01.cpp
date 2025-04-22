@@ -34,7 +34,16 @@ cout<<b<<endl;
 return 0;
 }
 
+/*
+OUTPUT:
 
+6
+Count: 0
+8
+7
+0
+
+*/
 
 
 

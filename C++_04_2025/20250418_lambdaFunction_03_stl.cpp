@@ -16,6 +16,8 @@ int main() {
         cout << n << " ";
     }
     cout<<endl;
+    // 9 5 2 1
+    
 
     // Sort in ascending order using a lambda
     sort(nums.begin(), nums.end(), [](int a, int b) {
@@ -26,5 +28,9 @@ int main() {
         cout << n << " ";
     }
     cout<<endl;
+    // 1 2 5 9
+
+    return 0;
+    return 0;
 }
 
