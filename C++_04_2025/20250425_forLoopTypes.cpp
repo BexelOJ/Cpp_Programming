@@ -38,36 +38,23 @@ for(int x : v1)
     cout<<x<<" ";
 cout<<endl;
 // v1 becomes: {1, 2, 3, 4, 5}
-// Note: The original vector was of size 7, but now it is resized to 5
-// and the extra elements are discarded.
-// v1 becomes: {1, 2, 3, 4, 5}
-
 
 // Iterator based for loop
 for(vector<int>::iterator it = v1.begin(); it != v1.end(); ++it)
     cout<<*it<<" ";
 cout<<endl;
 // v1 becomes: {1, 2, 3, 4, 5}
-// Note: The original vector was of size 7, but now it is resized to 5
-// and the extra elements are discarded.
-
 
 // Auto keyword based for loop
 for(auto it = v1.begin(); it != v1.end(); ++it)
     cout<<*it<<" ";
 cout<<endl;
 // v1 becomes: {1, 2, 3, 4, 5}
-// Note: The original vector was of size 7, but now it is resized to 5
-// and the extra elements are discarded.
-
 
 // For each loop with lambda function
 for_each(v1.begin(), v1.end(), [](int x){cout<<x<<" ";});
 cout<<endl;
 // v1 becomes: {1, 2, 3, 4, 5}
-// Note: The original vector was of size 7, but now it is resized to 5
-// and the extra elements are discarded.
-
 
 
 // Push back a new element
