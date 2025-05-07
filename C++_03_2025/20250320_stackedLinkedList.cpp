@@ -26,10 +26,15 @@ public:
     // Push function to add an element to the stack
     void push(int value) {
         Node* newNode = new Node(value);  // Create a new node
+        // Node newNode(value);
         newNode->next = top;  // Link the new node to the previous top
         top = newNode;  // Update the top to the new node
+        //  cout << top->data << endl;
+        //  cout << top->next << endl;
+        //  cout << newNode->data << endl;
+        //  cout << newNode->next << endl;
     }
-
+    
     // Pop function to remove the top element from the stack
     void pop() {
         if (isEmpty()) {
@@ -65,21 +70,22 @@ public:
 
 // Main function to test the stack implementation
 int main() {
-    Stack stack;
+    Stack* stack = new Stack;
 
-    stack.push(10);
-    stack.push(20);
-    stack.push(30);
+    stack->push(10);
+    stack->push(20);
+    stack->push(30);
 
-    cout << "Top element: " << stack.peek() << endl;  // Should print 30
+    cout << "Top element: " << stack->peek() << endl;  // Should print 30
 
-    stack.pop();
-    cout << "Top element after pop: " << stack.peek() << endl;  // Should print 20
+    //stack.pop();
+    cout << "Top element after pop: " << stack->peek() << endl;  // Should print 20
 
-    stack.pop();
-    stack.pop();
-    stack.pop();  // Trying to pop from empty stack
+    // stack.pop();
+    // stack.pop();
+    // stack.pop();  // Trying to pop from empty stack
 
+    delete stack;
     return 0;
 }
 

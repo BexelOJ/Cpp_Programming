@@ -14,7 +14,7 @@ public:
     
     ~Base() {
         cout << "Destructor Called" << endl;
-        //delete ptr;
+        delete[] ptr;
     }
      Base(const Base &other) {
          cout << "Copy Constructor Called" << endl;
