@@ -19,18 +19,15 @@ int main()
     int arr[count];
     for(int i=0; dup>0; i++){
     if(dup > 0){
-        count++;
         y = dup % 10;
         arr[i] = y;
         dup = dup / 10;
         }
     }
     
-    int m = sizeof(arr) / sizeof(arr[0]);
-
-    std::sort(arr, arr + m);
+    sort(arr, arr + count);
     
-    cout<<arr[m-1]*arr[m-2]<<endl;
+    cout<<arr[count-1]*arr[count-2]<<endl;
     
     return 0;
 }
