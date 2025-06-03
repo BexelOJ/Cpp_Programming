@@ -23,7 +23,8 @@ public:
 int main() {
     Base b1(1, 2); // Stack-based object
     Base b2 = b1;  // Shallow copy (uses default copy constructor)
-
+    // b2 = b1 // Shallow copy (uses default copy assignment operator)
+    
     b1.Display();
     b2.Display();
     return 0;

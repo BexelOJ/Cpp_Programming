@@ -18,8 +18,8 @@ public:
 
 int main() 
 {
-    Adder add5(5);  // Create a functor that adds 5
-
+    Adder add5(0);  // Create a functor that adds 5
+    std::cout<<add5(15)<<std::endl;
     int result = add5(10);  // Call the functor with 10
     std::cout << "Result: " << result << std::endl;  // Output: 15
 
