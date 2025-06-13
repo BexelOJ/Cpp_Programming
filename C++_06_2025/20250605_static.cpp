@@ -6,7 +6,7 @@ void function(int g){
     static int f = 30;
     cout<<"f : "<<f<<endl;
     f++;
-    cout<<"g : "<<g<<endl;
+    cout<<"g : "<<g<<endl<<endl;
 }
 
 static int f = 20;
@@ -15,7 +15,7 @@ int main(){
 static int a = 10;
 
 cout<<"a : "<<a<<endl;
-cout<<"g : "<<f<<endl;
+cout<<"g : "<<f<<endl<<endl;
 
 function(f);
 function(f);

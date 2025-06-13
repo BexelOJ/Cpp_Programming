@@ -3,12 +3,25 @@ using namespace std;
 
 // Renamed function
 void print2DArray(int x, int y, int** arr) {
+    
     for (int i = 0; i < x; i++) {
         for (int j = 0; j < y; j++) {
             cout << arr[i][j] << " ";
         }
         cout << endl;
     }
+    cout << endl;
+    cout << *arr[0] << endl;
+    cout << *arr[1] << endl;
+    cout << *arr[2] << endl;
+    cout << *arr[3] << endl;
+    cout << *arr[4] << endl;
+
+    cout << *(arr[0]+1) << endl;
+    cout << *(arr[1]+1) << endl;
+    cout << *(arr[2]+1) << endl;
+    cout << *(arr[3]+1) << endl;
+    cout << *(arr[4]+1) << endl;
 }
 
 int main() {
