@@ -17,7 +17,7 @@ int main(){
     int res = division(a,b);
     cout <<res<<endl;
     }
-    catch(const run* msg){
+    catch(const string* msg){
         cout<<msg<<endl;    
     }
     return 0;
