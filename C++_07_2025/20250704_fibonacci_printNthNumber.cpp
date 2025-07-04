@@ -17,7 +17,6 @@ void fibo(int x){
     
     while(x>2){
         c = a+b;
-        //cout<<c<<" ";
         a = b;
         b = c;
         x--;
