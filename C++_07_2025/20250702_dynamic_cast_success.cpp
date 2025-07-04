@@ -37,3 +37,10 @@ object should be of derived type, otherwise dynamic_cast will return nullptr.
 if object is of base type or not derived from base, dynamic_cast will return nullptr.
 */
 
+/*
+Output:
+
+Hi from Derived
+
+*/
+

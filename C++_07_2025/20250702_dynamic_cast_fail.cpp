@@ -21,3 +21,11 @@ else
     cout << "dynamic_cast failed" << endl;
 return 0;
 }
+
+/*
+Output:
+
+dynamic_cast failed
+
+*/
+
