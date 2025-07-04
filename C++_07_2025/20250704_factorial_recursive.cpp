@@ -6,7 +6,7 @@ long int factorial(int x){
     if (x == 0 or x == 1){
         return 1;
     }
-    return fin * factorial(fin-1);;    
+    return fin * factorial(fin-1);  
 }
 
 int main(){
