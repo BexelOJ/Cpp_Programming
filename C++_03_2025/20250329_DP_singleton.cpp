@@ -3,8 +3,9 @@ using namespace std;
 
 class Singleton {
 private:
-    static Singleton* instance;
-    Singleton() {
+    static Singleton* instance;  
+
+    Singleton() {    // constructor
         cout << "Constructor Called" << endl;
     }
 

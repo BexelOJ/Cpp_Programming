@@ -27,7 +27,7 @@ public:
 // Creator
 class AnimalFactory {
 public:
-    virtual Animal* createAnimal() = 0; // Factory method
+    virtual Animal* createAnimal() = 0; // Factory method, Pure virtual function
     virtual ~AnimalFactory() = default;
 };
 
