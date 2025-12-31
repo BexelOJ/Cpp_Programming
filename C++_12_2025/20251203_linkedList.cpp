@@ -15,8 +15,8 @@ private:
 public:
     LinkedList() : head(nullptr) {}
 
-    void insertAtHead(int data) {
-        Node* newNode = new Node(data);
+    void insertAtHead(int v) {
+        Node* newNode = new Node(v);
         newNode->next = head;
         head = newNode;
     }
@@ -33,7 +33,7 @@ public:
 
 int main() {
     LinkedList list;
-    
+
     list.insertAtHead(50);
     list.insertAtHead(40);
     list.insertAtHead(20);
@@ -41,6 +41,7 @@ int main() {
     list.insertAtHead(10);
 
     list.print();
+
 
     return 0;
 }
