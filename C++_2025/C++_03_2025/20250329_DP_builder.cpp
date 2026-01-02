@@ -147,3 +147,4 @@ RAM: 8GB DDR4
 Storage: 500GB HDD
 
 */
+
