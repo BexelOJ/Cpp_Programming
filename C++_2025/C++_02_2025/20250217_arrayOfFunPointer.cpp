@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 
 using namespace std;
 
@@ -41,4 +41,14 @@ cout<<"Division Result: "<<fptr[3](a,b)<<endl;
 return 0;
 }
 
+/*
+OUTPUT:
+Enter two Numbers:
+4 2
+Addtion Result: 6
+Subtration Result: 2
+Multiplication Result: 8
+Division Result: 2
+
+*/
 

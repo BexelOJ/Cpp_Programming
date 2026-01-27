@@ -1,13 +1,14 @@
-#include <iostream>
+﻿#include <iostream>
 
 // Define a callback function type (function pointer)
 typedef void (*CallbackFunction)(int);
 
 // A function that takes a callback function as an argument
-void processData(int data, CallbackFunction callback) {
+void processData(int data, CallbackFunction callBack){
     std::cout << "Processing data: " << data << std::endl;
+ 
     // Call the callback function
-    callback(data);
+    callBack(data);
 }
 
 // Define a function that will be used as a callback
@@ -23,4 +24,11 @@ int main() {
 
     return 0;
 }
+
+/*
+OUTPUT:
+Processing data: 42
+Callback function called with value: 42
+
+*/
 

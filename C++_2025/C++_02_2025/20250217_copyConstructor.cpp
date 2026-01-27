@@ -1,6 +1,4 @@
-#include <iostream>
-
-using namespace std;
+﻿#include <iostream>
 
 class Base{
 private:
@@ -10,13 +8,13 @@ public:
     int c;
     
     Base(int x, int y):a(x), b(y){
-        cout<<"Base Constructor Called"<<endl;
+        std::cout<<"Parameterized Base Constructor Called"<< std::endl;
     }
 
     void Display()
     {
-        cout<<"Inside Base Class"<<endl;
-        cout<<a<<" and "<<b<<endl;
+        std::cout<<"Inside Base Class"<< std::endl;
+        std::cout<<a<<" and "<<b<< std::endl;
     }
 };
 
@@ -37,15 +35,18 @@ return 0;
 }
 
 /*
-Base Constructor Called
+OUTPUT:
+
+Parameterized Base Constructor Called
 Inside Base Class
 1 and 2
 Inside Base Class
 1 and 2
-Base Constructor Called
+Parameterized Base Constructor Called
 Inside Base Class
 3 and 4
 Inside Base Class
 3 and 4
+
 */
 

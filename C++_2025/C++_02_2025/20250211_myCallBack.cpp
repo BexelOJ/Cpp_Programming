@@ -1,9 +1,8 @@
-#include <iostream>
-using namespace std;
+﻿#include <iostream>
 
-int callBack(int a, int b, int (*fptr)(int, int))
+int CallbackReceiverFunction(int a, int b, int (*fptr)(int, int))
 {
-    return fptr(a,b); 
+    return fptr(a,b); // calling the function and returning the result
 }
 
 int add(int x, int y)
@@ -30,19 +29,32 @@ int divi(int x, int y)
 int main()
 {
 int a = 0 , b = 0;
-cout<<"Enter the values of a and b: "<<endl;
-cin>>a>>b;
+std::cout<<"Enter the values of a and b: "<<std::endl;
+std::cin>>a>>b;
 
 //int res = 0;
-int resA = callBack(a,b,add);
-int resS = callBack(a,b,sub);
-int resM = callBack(a,b,mul);
-int resD = callBack(a,b,divi);
-cout<<"Addition: "<<resA<<endl;
-cout<<"Subtraction: "<<resS<<endl;
-cout<<"Multiplication: "<<resM<<endl;
-cout<<"Division: "<<resD<<endl;
+int resA = CallbackReceiverFunction(a,b,add);   // add is the callback function
+int resS = CallbackReceiverFunction(a,b,sub);   // sub is the callback function
+int resM = CallbackReceiverFunction(a,b,mul);   // mul is the callback function
+int resD = CallbackReceiverFunction(a,b,divi);  // divi is the callback function
+
+std::cout<<"Addition: "<<resA<< std::endl;
+std::cout<<"Subtraction: "<<resS<< std::endl;
+std::cout<<"Multiplication: "<<resM<< std::endl;
+std::cout<<"Division: "<<resD<< std::endl;
 return 0;
 }
 
+//"Higher-Order Function" or "Callback Receiver Function"
+
+/*
+OUTPUT:
+Enter the values of a and b:
+15 5
+Addition: 20
+Subtraction: 10
+Multiplication: 75
+Division: 3
+
+*/
 

@@ -1,6 +1,4 @@
-#include <iostream>
-
-using namespace std;
+﻿#include <iostream>
 
 class Base {
 private:
@@ -9,24 +7,24 @@ private:
 public: 
     int c;
     Base(int x, int y, int z) : a(x), b(y), c(z) {
-        cout << "Base Constructor Called" << endl;
+        std::cout << "Base Constructor Called" << std::endl;
     }
     
     // Copy constructor (deep copy)
     Base(const Base& other) {
-        cout << "Base Copy Constructor Called" << endl;
+        std::cout << "Base Copy Constructor Called" << std::endl;
         a = (other.a + 1);
         b = (other.b + 1);
         c = (other.c + 1);
     }
 
     void Display() {
-        cout << "Inside Base Class " <<a <<" " <<b <<" "<<c<<endl;
+        std::cout << "Inside Base Class " <<a <<" " <<b <<" "<<c<< std::endl;
     }
 };
 
 int main() {
-    // Create object on heap
+    // Create object on stack
     Base sb(50,60,70);
     sb.Display();
 
@@ -39,11 +37,11 @@ int main() {
     // Create a copy on the heap
     Base* b4 = new Base(*b3); // Calls the copy constructor
 
-    // Display both objects
+    // Display objects on Heap
     b3->Display();
     b4->Display();
 
-    // Free the allocated memory
+    // Free the heap allocated memory
     delete b3;
     delete b4;
 
