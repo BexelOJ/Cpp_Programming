@@ -12,12 +12,14 @@ public:
         return *this;  // Return reference to self
     }
 
+    /*
     // POSTFIX b1++  ← ADD THIS
     Base operator++(int) {      // 'int' distinguishes postfix
         Base old = *this;       // Save old value
         ++x;                    // Increment (use prefix)
         return old;             // Return old value
     }
+    */
 
     void display() {
         std::cout << "Value of x = " << x << std::endl;
@@ -31,8 +33,8 @@ int main() {
     ++b1;          // Calls operator++()
     b1.display();  // x = 11
 
-    b1++;
-    b1.display();
+   // b1++;
+   // b1.display();
 
     return 0;
 }
