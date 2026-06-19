@@ -14,7 +14,7 @@ public:
     void Display()
     {
         std::cout<<"Inside Base Class"<< std::endl;
-        std::cout<<a<<" and "<<b<< std::endl;
+        std::cout<<a<<" and "<<b<< std::endl<<std::endl;
     }
 };
 
@@ -40,11 +40,14 @@ OUTPUT:
 Parameterized Base Constructor Called
 Inside Base Class
 1 and 2
+
 Inside Base Class
 1 and 2
+
 Parameterized Base Constructor Called
 Inside Base Class
 3 and 4
+
 Inside Base Class
 3 and 4
 

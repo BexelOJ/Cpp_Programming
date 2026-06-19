@@ -13,7 +13,7 @@ public:
     Singleton(const Singleton&) = delete;  //  copy constructor is deleted, which prevents objects of the Singleton class from being copied.
     Singleton& operator=(const Singleton&) = delete;  // copy assignment operator is deleted, which prevents assigning one Singleton object to another.
 
-    static Singleton* getinstance()
+    static Singleton* getInstance()
     {
         if (instance == nullptr) {
             instance = new Singleton();
@@ -30,11 +30,10 @@ Singleton* Singleton::instance = nullptr;
 
 int main()
 {
-
-    Singleton* s1 = Singleton::getinstance();
+    Singleton* s1 = Singleton::getInstance();
     s1->showMessage();
 
-    Singleton* s2 = Singleton::getinstance();
+    Singleton* s2 = Singleton::getInstance();
     s2->showMessage();
 
     cout << "s1 and s2 are " << (s1 == s2 ? "Same" : "Different") << " instance" << endl;
@@ -45,7 +44,10 @@ int main()
 /*
 OUTPUT:
 
-
+Constructor Called
+Hello from Singleton
+Hello from Singleton
+s1 and s2 are Same instance
 
 */
 

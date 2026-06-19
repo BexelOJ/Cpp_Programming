@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 using namespace std;
 
 class Shape{
@@ -14,12 +14,10 @@ public:
     }
 
     friend void friendFunction(Shape &b);  // friend function declaration
-
 };
 
 void friendFunction(Shape &b)  // friend function definition
 {
-
     cout<<"Area: "<<b.length * b.breadth<<endl;
 }
 
@@ -31,4 +29,14 @@ friendFunction(b1);    // passing object 1
 friendFunction(*ptr2);  // passing object 2
 return 0;
 }
+
+/*
+OUTPUT:
+
+Base Class Parameterized Construtor Called
+Base Class Parameterized Construtor Called
+Area: 12
+Area: 30
+
+*/
 

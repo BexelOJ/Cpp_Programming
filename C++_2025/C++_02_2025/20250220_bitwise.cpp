@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 
 using namespace std;
 
@@ -13,5 +13,13 @@ return 0;
 }
 
 
+/*
+OUTPUT:
+
+255
+ff
+FE
+
+*/
 
 

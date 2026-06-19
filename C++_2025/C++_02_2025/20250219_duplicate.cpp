@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 using namespace std;
 
 void duplicate(int &x, int &y, int &z)
@@ -15,4 +15,11 @@ duplicate(a,b,c);
 cout<<a<<" "<<b<<" "<<c<<endl;
 return 0;
 }
+
+/*
+OUTPUT:
+
+2 4 6
+
+*/
 

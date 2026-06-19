@@ -1,4 +1,4 @@
-#include "20250226_staticheader.h"
+﻿#include "20250226_staticheader.h"
 #include <iostream>
 
 using namespace std;
@@ -14,3 +14,12 @@ MyClass::staticFunction();
 
 return 0;
 }
+
+
+/*
+OUTPUT:
+
+
+
+*/
+

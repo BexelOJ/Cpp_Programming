@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <memory>
 
 using namespace std;
@@ -12,4 +12,13 @@ cout<<*ptr<<endl;
 return 0;
 }
 
+
+/*
+OUTPUT:
+
+16
+4
+30
+
+*/
 

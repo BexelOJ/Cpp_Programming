@@ -1,10 +1,8 @@
 ﻿#include <iostream>
 
-class Myclass
-{
+class Myclass{
 private:
-        int value;
-
+        //int value;
 public:
 int operator()(int v)//:value(v)
 {
@@ -17,7 +15,7 @@ int operator()(int v)//:value(v)
 
 int main()
 {
-int a=0;
+int a = 0;
 
 std::cout<<"Enter a value: "<<std::endl;
 std::cin>>a;
