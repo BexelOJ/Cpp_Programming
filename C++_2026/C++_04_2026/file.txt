@@ -1,0 +1,462 @@
+Apr 08 15:31:56 Anareen kernel: Linux version 6.6.87.2-microsoft-standard-WSL2 (root@439a258ad544) (gcc (GCC) 11.2.0, GNU ld (GNU Binutils) 2.37) #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025
+Apr 08 15:31:56 Anareen kernel: Command line: initrd=\initrd.img WSL_ROOT_INIT=1 panic=-1 nr_cpus=8 hv_utils.timesync_implicit=1 console=hvc0 debug pty.legacy_count=0 WSL_ENABLE_CRASH_DUMP=1
+Apr 08 15:31:56 Anareen kernel: KERNEL supported cpus:
+Apr 08 15:31:56 Anareen kernel:   Intel GenuineIntel
+Apr 08 15:31:56 Anareen kernel:   AMD AuthenticAMD
+Apr 08 15:31:56 Anareen kernel: BIOS-provided physical RAM map:
+Apr 08 15:31:56 Anareen kernel: BIOS-e820: [mem 0x0000000000000000-0x000000000009ffff] usable
+Apr 08 15:31:56 Anareen kernel: BIOS-e820: [mem 0x00000000000e0000-0x00000000000e0fff] reserved
+Apr 08 15:31:56 Anareen kernel: BIOS-e820: [mem 0x0000000000100000-0x00000000001fffff] ACPI data
+Apr 08 15:31:56 Anareen kernel: BIOS-e820: [mem 0x0000000000200000-0x00000000f4bfffff] usable
+Apr 08 15:31:56 Anareen kernel: NX (Execute Disable) protection: active
+Apr 08 15:31:56 Anareen kernel: APIC: Static calls initialized
+Apr 08 15:31:56 Anareen kernel: DMI not present or invalid.
+Apr 08 15:31:56 Anareen kernel: Hypervisor detected: Microsoft Hyper-V
+Apr 08 15:31:56 Anareen kernel: Hyper-V: privilege flags low 0xae7f, high 0x3b8030, hints 0x9a4e24, misc 0xe4bed7b6
+Apr 08 15:31:56 Anareen kernel: Hyper-V: Nested features: 0x3e0101
+Apr 08 15:31:56 Anareen kernel: Hyper-V: LAPIC Timer Frequency: 0xc3500
+Apr 08 15:31:56 Anareen kernel: Hyper-V: Using hypercall for remote TLB flush
+Apr 08 15:31:56 Anareen kernel: clocksource: hyperv_clocksource_tsc_page: mask: 0xffffffffffffffff max_cycles: 0x24e6a1710, max_idle_ns: 440795202120 ns
+Apr 08 15:31:56 Anareen kernel: clocksource: hyperv_clocksource_msr: mask: 0xffffffffffffffff max_cycles: 0x24e6a1710, max_idle_ns: 440795202120 ns
+Apr 08 15:31:56 Anareen kernel: tsc: Detected 1996.801 MHz processor
+Apr 08 15:31:56 Anareen kernel: e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+Apr 08 15:31:56 Anareen kernel: e820: remove [mem 0x000a0000-0x000fffff] usable
+Apr 08 15:31:56 Anareen kernel: last_pfn = 0xf4c00 max_arch_pfn = 0x400000000
+Apr 08 15:31:56 Anareen kernel: MTRR map: 5 entries (4 fixed + 1 variable; max 20), built from 8 variable MTRRs
+Apr 08 15:31:56 Anareen kernel: x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+Apr 08 15:31:56 Anareen kernel: Using GB pages for direct mapping
+Apr 08 15:31:56 Anareen kernel: RAMDISK: [mem 0x04be4000-0x04e8bfff]
+Apr 08 15:31:56 Anareen kernel: ACPI: Early table checksum verification disabled
+Apr 08 15:31:56 Anareen kernel: ACPI: RSDP 0x00000000000E0000 000024 (v02 VRTUAL)
+Apr 08 15:31:56 Anareen kernel: ACPI: XSDT 0x0000000000100000 000044 (v01 VRTUAL MICROSFT 00000001 MSFT 00000001)
+Apr 08 15:31:56 Anareen kernel: ACPI: FACP 0x0000000000101000 000114 (v06 VRTUAL MICROSFT 00000001 MSFT 00000001)
+Apr 08 15:31:56 Anareen kernel: ACPI: DSDT 0x00000000001011B8 01E11C (v02 MSFTVM DSDT01   00000001 INTL 20230628)
+Apr 08 15:31:56 Anareen kernel: ACPI: FACS 0x0000000000101114 000040
+Apr 08 15:31:56 Anareen kernel: ACPI: OEM0 0x0000000000101154 000064 (v01 VRTUAL MICROSFT 00000001 MSFT 00000001)
+Apr 08 15:31:56 Anareen kernel: ACPI: SRAT 0x000000000011F2D4 000330 (v02 VRTUAL MICROSFT 00000001 MSFT 00000001)
+Apr 08 15:31:56 Anareen kernel: ACPI: APIC 0x000000000011F604 000088 (v04 VRTUAL MICROSFT 00000001 MSFT 00000001)
+Apr 08 15:31:56 Anareen kernel: ACPI: Reserving FACP table memory at [mem 0x101000-0x101113]
+Apr 08 15:31:56 Anareen kernel: ACPI: Reserving DSDT table memory at [mem 0x1011b8-0x11f2d3]
+Apr 08 15:31:56 Anareen kernel: ACPI: Reserving FACS table memory at [mem 0x101114-0x101153]
+Apr 08 15:31:56 Anareen kernel: ACPI: Reserving OEM0 table memory at [mem 0x101154-0x1011b7]
+Apr 08 15:31:56 Anareen kernel: ACPI: Reserving SRAT table memory at [mem 0x11f2d4-0x11f603]
+Apr 08 15:31:56 Anareen kernel: ACPI: Reserving APIC table memory at [mem 0x11f604-0x11f68b]
+Apr 08 15:31:56 Anareen kernel: SRAT: PXM 0 -> APIC 0x00 -> Node 0
+Apr 08 15:31:56 Anareen kernel: SRAT: PXM 0 -> APIC 0x01 -> Node 0
+Apr 08 15:31:56 Anareen kernel: SRAT: PXM 0 -> APIC 0x02 -> Node 0
+Apr 08 15:31:56 Anareen kernel: SRAT: PXM 0 -> APIC 0x03 -> Node 0
+Apr 08 15:31:56 Anareen kernel: SRAT: PXM 0 -> APIC 0x04 -> Node 0
+Apr 08 15:31:56 Anareen kernel: SRAT: PXM 0 -> APIC 0x05 -> Node 0
+Apr 08 15:31:56 Anareen kernel: SRAT: PXM 0 -> APIC 0x06 -> Node 0
+Apr 08 15:31:56 Anareen kernel: SRAT: PXM 0 -> APIC 0x07 -> Node 0
+Apr 08 15:31:56 Anareen kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x00000000-0xf4bfffff] hotplug
+Apr 08 15:31:56 Anareen kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0xf4c00000-0xf7ffffff] hotplug
+Apr 08 15:31:56 Anareen kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x100000000-0x9ffdfffff] hotplug
+Apr 08 15:31:56 Anareen kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x1000000000-0xffffffffff] hotplug
+Apr 08 15:31:56 Anareen kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x10000000000-0x1ffffffffff] hotplug
+Apr 08 15:31:56 Anareen kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x20000000000-0x3ffffffffff] hotplug
+Apr 08 15:31:56 Anareen kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x40000000000-0x7ffffffffff] hotplug
+Apr 08 15:31:56 Anareen kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x80000000000-0xfffffffffff] hotplug
+Apr 08 15:31:56 Anareen kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x100000000000-0x1fffffffffff] hotplug
+Apr 08 15:31:56 Anareen kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x200000000000-0x3fffffffffff] hotplug
+Apr 08 15:31:56 Anareen kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x400000000000-0x7fffffffffff] hotplug
+Apr 08 15:31:56 Anareen kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x800000000000-0xffffffffffff] hotplug
+Apr 08 15:31:56 Anareen kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x1000000000000-0x1ffffffffffff] hotplug
+Apr 08 15:31:56 Anareen kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x2000000000000-0x3ffffffffffff] hotplug
+Apr 08 15:31:56 Anareen kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x4000000000000-0x7ffffffffffff] hotplug
+Apr 08 15:31:56 Anareen kernel: ACPI: SRAT: Node 0 PXM 0 [mem 0x8000000000000-0xfffffffffffff] hotplug
+Apr 08 15:31:56 Anareen kernel: NODE_DATA(0) allocated [mem 0xf4bde000-0xf4bfffff]
+Apr 08 15:31:56 Anareen kernel: Zone ranges:
+Apr 08 15:31:56 Anareen kernel:   DMA32    [mem 0x0000000000001000-0x00000000f4bfffff]
+Apr 08 15:31:56 Anareen kernel:   Normal   empty
+Apr 08 15:31:56 Anareen kernel:   Device   empty
+Apr 08 15:31:56 Anareen kernel: Movable zone start for each node
+Apr 08 15:31:56 Anareen kernel: Early memory node ranges
+Apr 08 15:31:56 Anareen kernel:   node   0: [mem 0x0000000000001000-0x000000000009ffff]
+Apr 08 15:31:56 Anareen kernel:   node   0: [mem 0x0000000000200000-0x00000000f4bfffff]
+Apr 08 15:31:56 Anareen kernel: Initmem setup node 0 [mem 0x0000000000001000-0x00000000f4bfffff]
+Apr 08 15:31:56 Anareen kernel: On node 0, zone DMA32: 1 pages in unavailable ranges
+Apr 08 15:31:56 Anareen kernel: On node 0, zone DMA32: 352 pages in unavailable ranges
+Apr 08 15:31:56 Anareen kernel: On node 0, zone DMA32: 13312 pages in unavailable ranges
+Apr 08 15:31:56 Anareen kernel: ACPI: PM-Timer IO Port: 0x408
+Apr 08 15:31:56 Anareen kernel: ACPI: LAPIC_NMI (acpi_id[0x01] dfl dfl lint[0x1])
+Apr 08 15:31:56 Anareen kernel: IOAPIC[0]: apic_id 8, version 17, address 0xfec00000, GSI 0-23
+Apr 08 15:31:56 Anareen kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+Apr 08 15:31:56 Anareen kernel: ACPI: Using ACPI (MADT) for SMP configuration information
+Apr 08 15:31:56 Anareen kernel: TSC deadline timer available
+Apr 08 15:31:56 Anareen kernel: smpboot: Allowing 8 CPUs, 0 hotplug CPUs
+Apr 08 15:31:56 Anareen kernel: PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+Apr 08 15:31:56 Anareen kernel: PM: hibernation: Registered nosave memory: [mem 0x000a0000-0x000dffff]
+Apr 08 15:31:56 Anareen kernel: PM: hibernation: Registered nosave memory: [mem 0x000e0000-0x000e0fff]
+Apr 08 15:31:56 Anareen kernel: PM: hibernation: Registered nosave memory: [mem 0x000e1000-0x000fffff]
+Apr 08 15:31:56 Anareen kernel: PM: hibernation: Registered nosave memory: [mem 0x00100000-0x001fffff]
+Apr 08 15:31:56 Anareen kernel: [mem 0xf4c00000-0xffffffff] available for PCI devices
+Apr 08 15:31:56 Anareen kernel: Booting paravirtualized kernel on Hyper-V
+Apr 08 15:31:56 Anareen kernel: clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
+Apr 08 15:31:56 Anareen kernel: setup_percpu: NR_CPUS:8192 nr_cpumask_bits:8 nr_cpu_ids:8 nr_node_ids:1
+Apr 08 15:31:56 Anareen kernel: percpu: Embedded 63 pages/cpu s221184 r8192 d28672 u262144
+Apr 08 15:31:56 Anareen kernel: pcpu-alloc: s221184 r8192 d28672 u262144 alloc=1*2097152
+Apr 08 15:31:56 Anareen kernel: pcpu-alloc: [0] 0 1 2 3 4 5 6 7 
+Apr 08 15:31:56 Anareen kernel: Hyper-V: PV spinlocks enabled
+Apr 08 15:31:56 Anareen kernel: PV qspinlock hash table entries: 256 (order: 0, 4096 bytes, linear)
+Apr 08 15:31:56 Anareen kernel: Kernel command line: initrd=\initrd.img WSL_ROOT_INIT=1 panic=-1 nr_cpus=8 hv_utils.timesync_implicit=1 console=hvc0 debug pty.legacy_count=0 WSL_ENABLE_CRASH_DUMP=1
+Apr 08 15:31:56 Anareen kernel: Unknown kernel command line parameters "WSL_ROOT_INIT=1 WSL_ENABLE_CRASH_DUMP=1", will be passed to user space.
+Apr 08 15:31:56 Anareen kernel: random: crng init done
+Apr 08 15:31:56 Anareen kernel: Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+Apr 08 15:31:56 Anareen kernel: Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+Apr 08 15:31:56 Anareen kernel: Fallback order for Node 0: 0 
+Apr 08 15:31:56 Anareen kernel: Built 1 zonelists, mobility grouping on.  Total pages: 986320
+Apr 08 15:31:56 Anareen kernel: Policy zone: DMA32
+Apr 08 15:31:56 Anareen kernel: mem auto-init: stack:off, heap alloc:on, heap free:off
+Apr 08 15:31:56 Anareen kernel: software IO TLB: area num 8.
+Apr 08 15:31:56 Anareen kernel: Memory: 257116K/4008572K available (20480K kernel code, 3457K rwdata, 13496K rodata, 4492K init, 6208K bss, 190756K reserved, 0K cma-reserved)
+Apr 08 15:31:56 Anareen kernel: SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+Apr 08 15:31:56 Anareen kernel: ftrace: allocating 55808 entries in 218 pages
+Apr 08 15:31:56 Anareen kernel: ftrace: allocated 218 pages with 5 groups
+Apr 08 15:31:56 Anareen kernel: Dynamic Preempt: none
+Apr 08 15:31:56 Anareen kernel: rcu: Preemptible hierarchical RCU implementation.
+Apr 08 15:31:56 Anareen kernel: rcu:         RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=8.
+Apr 08 15:31:56 Anareen kernel:         Trampoline variant of Tasks RCU enabled.
+Apr 08 15:31:56 Anareen kernel:         Rude variant of Tasks RCU enabled.
+Apr 08 15:31:56 Anareen kernel:         Tracing variant of Tasks RCU enabled.
+Apr 08 15:31:56 Anareen kernel: rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+Apr 08 15:31:56 Anareen kernel: rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=8
+Apr 08 15:31:56 Anareen kernel: Using NULL legacy PIC
+Apr 08 15:31:56 Anareen kernel: NR_IRQS: 524544, nr_irqs: 488, preallocated irqs: 0
+Apr 08 15:31:56 Anareen kernel: rcu: srcu_init: Setting srcu_struct sizes based on contention.
+Apr 08 15:31:56 Anareen kernel: Console: colour dummy device 80x25
+Apr 08 15:31:56 Anareen kernel: ACPI: Core revision 20230628
+Apr 08 15:31:56 Anareen kernel: Failed to register legacy timer interrupt
+Apr 08 15:31:56 Anareen kernel: APIC: Switch to symmetric I/O mode setup
+Apr 08 15:31:56 Anareen kernel: x2apic enabled
+Apr 08 15:31:56 Anareen kernel: APIC: Switched APIC routing to: physical x2apic
+Apr 08 15:31:56 Anareen kernel: Hyper-V: Host Build 10.0.26100.8117-8-0
+Apr 08 15:31:56 Anareen kernel: Hyper-V: enabling crash_kexec_post_notifiers
+Apr 08 15:31:56 Anareen kernel: Hyper-V: Disabling IBT because of Hyper-V bug
+Apr 08 15:31:56 Anareen kernel: Hyper-V: Using IPI hypercalls
+Apr 08 15:31:56 Anareen kernel: APIC: send_IPI() replaced with hv_send_ipi()
+Apr 08 15:31:56 Anareen kernel: APIC: send_IPI_mask() replaced with hv_send_ipi_mask()
+Apr 08 15:31:56 Anareen kernel: APIC: send_IPI_mask_allbutself() replaced with hv_send_ipi_mask_allbutself()
+Apr 08 15:31:56 Anareen kernel: APIC: send_IPI_allbutself() replaced with hv_send_ipi_allbutself()
+Apr 08 15:31:56 Anareen kernel: APIC: send_IPI_all() replaced with hv_send_ipi_all()
+Apr 08 15:31:56 Anareen kernel: APIC: send_IPI_self() replaced with hv_send_ipi_self()
+Apr 08 15:31:56 Anareen kernel: clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x3990c0666d0, max_idle_ns: 881590676152 ns
+Apr 08 15:31:56 Anareen kernel: Calibrating delay loop (skipped), value calculated using timer frequency.. 3993.60 BogoMIPS (lpj=7987204)
+Apr 08 15:31:56 Anareen kernel: x86/cpu: User Mode Instruction Prevention (UMIP) activated
+Apr 08 15:31:56 Anareen kernel: Last level iTLB entries: 4KB 0, 2MB 0, 4MB 0
+Apr 08 15:31:56 Anareen kernel: Last level dTLB entries: 4KB 0, 2MB 0, 4MB 0, 1GB 0
+Apr 08 15:31:56 Anareen kernel: Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+Apr 08 15:31:56 Anareen kernel: Spectre V2 : Spectre BHI mitigation: SW BHB clearing on vm exit
+Apr 08 15:31:56 Anareen kernel: Spectre V2 : Spectre BHI mitigation: SW BHB clearing on syscall
+Apr 08 15:31:56 Anareen kernel: Spectre V2 : Mitigation: Enhanced / Automatic IBRS
+Apr 08 15:31:56 Anareen kernel: Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+Apr 08 15:31:56 Anareen kernel: Spectre V2 : Spectre v2 / PBRSB-eIBRS: Retire a single CALL on VMEXIT
+Apr 08 15:31:56 Anareen kernel: RETBleed: Mitigation: Enhanced IBRS
+Apr 08 15:31:56 Anareen kernel: Spectre V2 : mitigation: Enabling conditional Indirect Branch Prediction Barrier
+Apr 08 15:31:56 Anareen kernel: Speculative Store Bypass: Mitigation: Speculative Store Bypass disabled via prctl
+Apr 08 15:31:56 Anareen kernel: x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+Apr 08 15:31:56 Anareen kernel: x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+Apr 08 15:31:56 Anareen kernel: x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+Apr 08 15:31:56 Anareen kernel: x86/fpu: Supporting XSAVE feature 0x020: 'AVX-512 opmask'
+Apr 08 15:31:56 Anareen kernel: x86/fpu: Supporting XSAVE feature 0x040: 'AVX-512 Hi256'
+Apr 08 15:31:56 Anareen kernel: x86/fpu: Supporting XSAVE feature 0x080: 'AVX-512 ZMM_Hi256'
+Apr 08 15:31:56 Anareen kernel: x86/fpu: Supporting XSAVE feature 0x800: 'Control-flow User registers'
+Apr 08 15:31:56 Anareen kernel: x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+Apr 08 15:31:56 Anareen kernel: x86/fpu: xstate_offset[5]:  832, xstate_sizes[5]:   64
+Apr 08 15:31:56 Anareen kernel: x86/fpu: xstate_offset[6]:  896, xstate_sizes[6]:  512
+Apr 08 15:31:56 Anareen kernel: x86/fpu: xstate_offset[7]: 1408, xstate_sizes[7]: 1024
+Apr 08 15:31:56 Anareen kernel: x86/fpu: xstate_offset[11]: 2432, xstate_sizes[11]:   16
+Apr 08 15:31:56 Anareen kernel: x86/fpu: Enabled xstate features 0x8e7, context size is 2448 bytes, using 'compacted' format.
+Apr 08 15:31:56 Anareen kernel: Freeing SMP alternatives memory: 44K
+Apr 08 15:31:56 Anareen kernel: pid_max: default: 32768 minimum: 301
+Apr 08 15:31:56 Anareen kernel: LSM: initializing lsm=capability,landlock,yama,safesetid,selinux,integrity
+Apr 08 15:31:56 Anareen kernel: landlock: Up and running.
+Apr 08 15:31:56 Anareen kernel: Yama: becoming mindful.
+Apr 08 15:31:56 Anareen kernel: SELinux:  Initializing.
+Apr 08 15:31:56 Anareen kernel: Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+Apr 08 15:31:56 Anareen kernel: Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+Apr 08 15:31:56 Anareen kernel: smpboot: CPU0: 11th Gen Intel(R) Core(TM) i3-1125G4 @ 2.00GHz (family: 0x6, model: 0x8c, stepping: 0x1)
+Apr 08 15:31:56 Anareen kernel: RCU Tasks: Setting shift to 3 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=8.
+Apr 08 15:31:56 Anareen kernel: RCU Tasks Rude: Setting shift to 3 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=8.
+Apr 08 15:31:56 Anareen kernel: RCU Tasks Trace: Setting shift to 3 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=8.
+Apr 08 15:31:56 Anareen kernel: Performance Events:  AnyThread deprecated, Icelake events, 32-deep LBR, full-width counters, Intel PMU driver.
+Apr 08 15:31:56 Anareen kernel: ... version:                5
+Apr 08 15:31:56 Anareen kernel: ... bit width:              48
+Apr 08 15:31:56 Anareen kernel: ... generic registers:      8
+Apr 08 15:31:56 Anareen kernel: ... value mask:             0000ffffffffffff
+Apr 08 15:31:56 Anareen kernel: ... max period:             00007fffffffffff
+Apr 08 15:31:56 Anareen kernel: ... fixed-purpose events:   4
+Apr 08 15:31:56 Anareen kernel: ... event mask:             0001000f000000ff
+Apr 08 15:31:56 Anareen kernel: signal: max sigframe size: 3632
+Apr 08 15:31:56 Anareen kernel: rcu: Hierarchical SRCU implementation.
+Apr 08 15:31:56 Anareen kernel: rcu:         Max phase no-delay instances is 1000.
+Apr 08 15:31:56 Anareen kernel: smp: Bringing up secondary CPUs ...
+Apr 08 15:31:56 Anareen kernel: smpboot: x86: Booting SMP configuration:
+Apr 08 15:31:56 Anareen kernel: .... node  #0, CPUs:      #2 #4 #6 #1 #3 #5 #7
+Apr 08 15:31:56 Anareen kernel: smp: Brought up 1 node, 8 CPUs
+Apr 08 15:31:56 Anareen kernel: smpboot: Max logical packages: 1
+Apr 08 15:31:56 Anareen kernel: smpboot: Total of 8 processors activated (31948.81 BogoMIPS)
+Apr 08 15:31:56 Anareen kernel: node 0 deferred pages initialised in 16ms
+Apr 08 15:31:56 Anareen kernel: devtmpfs: initialized
+Apr 08 15:31:56 Anareen kernel: x86/mm: Memory block size: 128MB
+Apr 08 15:31:56 Anareen kernel: clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+Apr 08 15:31:56 Anareen kernel: futex hash table entries: 2048 (order: 5, 131072 bytes, linear)
+Apr 08 15:31:56 Anareen kernel: pinctrl core: initialized pinctrl subsystem
+Apr 08 15:31:56 Anareen kernel: NET: Registered PF_NETLINK/PF_ROUTE protocol family
+Apr 08 15:31:56 Anareen kernel: DMA: preallocated 512 KiB GFP_KERNEL pool for atomic allocations
+Apr 08 15:31:56 Anareen kernel: DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+Apr 08 15:31:56 Anareen kernel: audit: initializing netlink subsys (disabled)
+Apr 08 15:31:56 Anareen kernel: audit: type=2000 audit(1775642513.028:1): state=initialized audit_enabled=0 res=1
+Apr 08 15:31:56 Anareen kernel: thermal_sys: Registered thermal governor 'step_wise'
+Apr 08 15:31:56 Anareen kernel: thermal_sys: Registered thermal governor 'user_space'
+Apr 08 15:31:56 Anareen kernel: cpuidle: using governor ladder
+Apr 08 15:31:56 Anareen kernel: cpuidle: using governor menu
+Apr 08 15:31:56 Anareen kernel: acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+Apr 08 15:31:56 Anareen kernel: dca service started, version 1.12.1
+Apr 08 15:31:56 Anareen kernel: PCI: Fatal: No config space access function found
+Apr 08 15:31:56 Anareen kernel: kprobes: kprobe jump-optimization is enabled. All kprobes are optimized if possible.
+Apr 08 15:31:56 Anareen kernel: HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+Apr 08 15:31:56 Anareen kernel: HugeTLB: 16380 KiB vmemmap can be freed for a 1.00 GiB page
+Apr 08 15:31:56 Anareen kernel: HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+Apr 08 15:31:56 Anareen kernel: HugeTLB: 28 KiB vmemmap can be freed for a 2.00 MiB page
+Apr 08 15:31:56 Anareen kernel: cryptd: max_cpu_qlen set to 1000
+Apr 08 15:31:56 Anareen kernel: ACPI: Added _OSI(Module Device)
+Apr 08 15:31:56 Anareen kernel: ACPI: Added _OSI(Processor Device)
+Apr 08 15:31:56 Anareen kernel: ACPI: Added _OSI(3.0 _SCP Extensions)
+Apr 08 15:31:56 Anareen kernel: ACPI: Added _OSI(Processor Aggregator Device)
+Apr 08 15:31:56 Anareen kernel: ACPI: 1 ACPI AML tables successfully acquired and loaded
+Apr 08 15:31:56 Anareen kernel: ACPI: _OSC evaluation for CPUs failed, trying _PDC
+Apr 08 15:31:56 Anareen kernel: ACPI: Interpreter enabled
+Apr 08 15:31:56 Anareen kernel: ACPI: PM: (supports S0 S5)
+Apr 08 15:31:56 Anareen kernel: ACPI: Using IOAPIC for interrupt routing
+Apr 08 15:31:56 Anareen kernel: PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+Apr 08 15:31:56 Anareen kernel: PCI: Using E820 reservations for host bridge windows
+Apr 08 15:31:56 Anareen kernel: ACPI: Enabled 2 GPEs in block 00 to 0F
+Apr 08 15:31:56 Anareen kernel: iommu: Default domain type: Translated
+Apr 08 15:31:56 Anareen kernel: iommu: DMA domain TLB invalidation policy: lazy mode
+Apr 08 15:31:56 Anareen kernel: SCSI subsystem initialized
+Apr 08 15:31:56 Anareen kernel: libata version 3.00 loaded.
+Apr 08 15:31:56 Anareen kernel: pps_core: LinuxPPS API ver. 1 registered
+Apr 08 15:31:56 Anareen kernel: pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+Apr 08 15:31:56 Anareen kernel: PTP clock support registered
+Apr 08 15:31:56 Anareen kernel: EDAC MC: Ver: 3.0.0
+Apr 08 15:31:56 Anareen kernel: hv_vmbus: Vmbus version:5.3
+Apr 08 15:31:56 Anareen kernel: hv_vmbus: Unknown GUID: 6e382d18-3336-4f4b-acc4-2b7703d4df4a
+Apr 08 15:31:56 Anareen kernel: hv_vmbus: Unknown GUID: dde9cbc0-5060-4436-9448-ea1254a5d177
+Apr 08 15:31:56 Anareen kernel: NetLabel: Initializing
+Apr 08 15:31:56 Anareen kernel: NetLabel:  domain hash size = 128
+Apr 08 15:31:56 Anareen kernel: NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+Apr 08 15:31:56 Anareen kernel: NetLabel:  unlabeled traffic allowed by default
+Apr 08 15:31:56 Anareen kernel: PCI: Using ACPI for IRQ routing
+Apr 08 15:31:56 Anareen kernel: PCI: System does not support PCI
+Apr 08 15:31:56 Anareen kernel: vgaarb: loaded
+Apr 08 15:31:56 Anareen kernel: clocksource: Switched to clocksource tsc-early
+Apr 08 15:31:56 Anareen kernel: VFS: Disk quotas dquot_6.6.0
+Apr 08 15:31:56 Anareen kernel: VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+Apr 08 15:31:56 Anareen kernel: FS-Cache: Loaded
+Apr 08 15:31:56 Anareen kernel: pnp: PnP ACPI init
+Apr 08 15:31:56 Anareen kernel: pnp: PnP ACPI: found 1 devices
+Apr 08 15:31:56 Anareen kernel: clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+Apr 08 15:31:56 Anareen kernel: NET: Registered PF_INET protocol family
+Apr 08 15:31:56 Anareen kernel: IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)
+Apr 08 15:31:56 Anareen kernel: tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
+Apr 08 15:31:56 Anareen kernel: Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+Apr 08 15:31:56 Anareen kernel: TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
+Apr 08 15:31:56 Anareen kernel: TCP bind hash table entries: 32768 (order: 8, 1048576 bytes, linear)
+Apr 08 15:31:56 Anareen kernel: TCP: Hash tables configured (established 32768 bind 32768)
+Apr 08 15:31:56 Anareen kernel: UDP hash table entries: 2048 (order: 4, 65536 bytes, linear)
+Apr 08 15:31:56 Anareen kernel: UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes, linear)
+Apr 08 15:31:56 Anareen kernel: NET: Registered PF_UNIX/PF_LOCAL protocol family
+Apr 08 15:31:56 Anareen kernel: NET: Registered PF_XDP protocol family
+Apr 08 15:31:56 Anareen kernel: PCI: CLS 0 bytes, default 64
+Apr 08 15:31:56 Anareen kernel: PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+Apr 08 15:31:56 Anareen kernel: software IO TLB: mapped [mem 0x00000000ec400000-0x00000000f0400000] (64MB)
+Apr 08 15:31:56 Anareen kernel: Trying to unpack rootfs image as initramfs...
+Apr 08 15:31:56 Anareen kernel: Freeing initrd memory: 2720K
+Apr 08 15:31:56 Anareen kernel: RAPL PMU: API unit is 2^-32 Joules, 0 fixed counters, 10737418240 ms ovfl timer
+Apr 08 15:31:56 Anareen kernel: clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x3990c0666d0, max_idle_ns: 881590676152 ns
+Apr 08 15:31:56 Anareen kernel: clocksource: Switched to clocksource tsc
+Apr 08 15:31:56 Anareen kernel: Initialise system trusted keyrings
+Apr 08 15:31:56 Anareen kernel: Key type blacklist registered
+Apr 08 15:31:56 Anareen kernel: workingset: timestamp_bits=36 max_order=20 bucket_order=0
+Apr 08 15:31:56 Anareen kernel: squashfs: version 4.0 (2009/01/31) Phillip Lougher
+Apr 08 15:31:56 Anareen kernel: fuse: init (API version 7.39)
+Apr 08 15:31:56 Anareen kernel: SGI XFS with ACLs, security attributes, realtime, verbose warnings, quota, no debug enabled
+Apr 08 15:31:56 Anareen kernel: 9p: Installing v9fs 9p2000 file system support
+Apr 08 15:31:56 Anareen kernel: Key type asymmetric registered
+Apr 08 15:31:56 Anareen kernel: Asymmetric key parser 'x509' registered
+Apr 08 15:31:56 Anareen kernel: Block layer SCSI generic (bsg) driver version 0.4 loaded (major 245)
+Apr 08 15:31:56 Anareen kernel: io scheduler mq-deadline registered
+Apr 08 15:31:56 Anareen kernel: io scheduler kyber registered
+Apr 08 15:31:56 Anareen kernel: hv_vmbus: registering driver hv_pci
+Apr 08 15:31:56 Anareen kernel: hv_pci c4b741f5-5582-4c98-8f8b-2e082933c396: PCI VMBus probing: Using version 0x10004
+Apr 08 15:31:56 Anareen kernel: hv_pci c4b741f5-5582-4c98-8f8b-2e082933c396: PCI host bridge to bus 5582:00
+Apr 08 15:31:56 Anareen kernel: pci_bus 5582:00: root bus resource [mem 0x9ffe00000-0x9ffe02fff window]
+Apr 08 15:31:56 Anareen kernel: pci_bus 5582:00: No busn resource found for root bus, will use [bus 00-ff]
+Apr 08 15:31:56 Anareen kernel: pci 5582:00:00.0: [1af4:1043] type 00 class 0x010000
+Apr 08 15:31:56 Anareen kernel: pci 5582:00:00.0: reg 0x10: [mem 0x9ffe00000-0x9ffe00fff 64bit]
+Apr 08 15:31:56 Anareen kernel: pci 5582:00:00.0: reg 0x18: [mem 0x9ffe01000-0x9ffe01fff 64bit]
+Apr 08 15:31:56 Anareen kernel: pci 5582:00:00.0: reg 0x20: [mem 0x9ffe02000-0x9ffe02fff 64bit]
+Apr 08 15:31:56 Anareen kernel: pci_bus 5582:00: busn_res: [bus 00-ff] end is updated to 00
+Apr 08 15:31:56 Anareen kernel: pci 5582:00:00.0: BAR 0: assigned [mem 0x9ffe00000-0x9ffe00fff 64bit]
+Apr 08 15:31:56 Anareen kernel: pci 5582:00:00.0: BAR 2: assigned [mem 0x9ffe01000-0x9ffe01fff 64bit]
+Apr 08 15:31:56 Anareen kernel: pci 5582:00:00.0: BAR 4: assigned [mem 0x9ffe02000-0x9ffe02fff 64bit]
+Apr 08 15:31:56 Anareen kernel: hv_pci 65ebe290-bef1-425e-980e-16e451b091a9: PCI VMBus probing: Using version 0x10004
+Apr 08 15:31:56 Anareen kernel: hv_pci 65ebe290-bef1-425e-980e-16e451b091a9: PCI host bridge to bus bef1:00
+Apr 08 15:31:56 Anareen kernel: pci_bus bef1:00: No busn resource found for root bus, will use [bus 00-ff]
+Apr 08 15:31:56 Anareen kernel: pci bef1:00:00.0: [1414:008e] type 00 class 0x030200
+Apr 08 15:31:56 Anareen kernel: pci_bus bef1:00: busn_res: [bus 00-ff] end is updated to 00
+Apr 08 15:31:56 Anareen kernel: ioatdma: Intel(R) QuickData Technology Driver 5.00
+Apr 08 15:31:56 Anareen kernel: virtio-pci 5582:00:00.0: enabling device (0000 -> 0002)
+Apr 08 15:31:56 Anareen kernel: Serial: 8250/16550 driver, 8 ports, IRQ sharing enabled
+Apr 08 15:31:56 Anareen kernel: Linux agpgart interface v0.103
+Apr 08 15:31:56 Anareen kernel: AMD-Vi: AMD IOMMUv2 functionality not available on this system - This is not a bug.
+Apr 08 15:31:56 Anareen kernel: ACPI: bus type drm_connector registered
+Apr 08 15:31:56 Anareen kernel: printk: console [hvc0] enabled
+Apr 08 15:31:56 Anareen kernel: brd: module loaded
+Apr 08 15:31:56 Anareen kernel: loop: module loaded
+Apr 08 15:31:56 Anareen kernel: Loading iSCSI transport class v2.0-870.
+Apr 08 15:31:56 Anareen kernel: rdac: device handler registered
+Apr 08 15:31:56 Anareen kernel: Microchip SmartPQI Driver (v2.1.24-046)
+Apr 08 15:31:56 Anareen kernel: VMware PVSCSI driver - version 1.0.7.0-k
+Apr 08 15:31:56 Anareen kernel: hv_vmbus: registering driver hv_storvsc
+Apr 08 15:31:56 Anareen kernel: PPP generic driver version 2.4.2
+Apr 08 15:31:56 Anareen kernel: scsi host0: storvsc_host_t
+Apr 08 15:31:56 Anareen kernel: VMware vmxnet3 virtual NIC driver - version 1.7.0.0-k-NAPI
+Apr 08 15:31:56 Anareen kernel: hv_vmbus: registering driver hv_netvsc
+Apr 08 15:31:56 Anareen kernel: Fusion MPT base driver 3.04.20
+Apr 08 15:31:56 Anareen kernel: Copyright (c) 1999-2008 LSI Corporation
+Apr 08 15:31:56 Anareen kernel: Fusion MPT SPI Host driver 3.04.20
+Apr 08 15:31:56 Anareen kernel: Fusion MPT SAS Host driver 3.04.20
+Apr 08 15:31:56 Anareen kernel: Fusion MPT misc device (ioctl) driver 3.04.20
+Apr 08 15:31:56 Anareen kernel: mptctl: Registered with Fusion MPT base driver
+Apr 08 15:31:56 Anareen kernel: mptctl: /dev/mptctl @ (major,minor=10,220)
+Apr 08 15:31:56 Anareen kernel: i8042: PNP: No PS/2 controller found.
+Apr 08 15:31:56 Anareen kernel: hv_vmbus: registering driver hyperv_keyboard
+Apr 08 15:31:56 Anareen kernel: rtc_cmos 00:00: RTC can wake from S4
+Apr 08 15:31:56 Anareen kernel: rtc_cmos 00:00: registered as rtc0
+Apr 08 15:31:56 Anareen kernel: rtc_cmos 00:00: setting system clock to 2026-04-08T10:01:53 UTC (1775642513)
+Apr 08 15:31:56 Anareen kernel: rtc_cmos 00:00: alarms up to one month, 114 bytes nvram
+Apr 08 15:31:56 Anareen kernel: device-mapper: core: CONFIG_IMA_DISABLE_HTABLE is disabled. Duplicate IMA measurements will not be recorded in the IMA log.
+Apr 08 15:31:56 Anareen kernel: device-mapper: uevent: version 1.0.3
+Apr 08 15:31:56 Anareen kernel: device-mapper: ioctl: 4.48.0-ioctl (2023-03-01) initialised: dm-devel@redhat.com
+Apr 08 15:31:56 Anareen kernel: intel_pstate: CPU model not supported
+Apr 08 15:31:56 Anareen kernel: hv_utils: Registering HyperV Utility Driver
+Apr 08 15:31:56 Anareen kernel: hv_vmbus: registering driver hv_utils
+Apr 08 15:31:56 Anareen kernel: hv_vmbus: registering driver hv_balloon
+Apr 08 15:31:56 Anareen kernel: hv_vmbus: registering driver dxgkrnl
+Apr 08 15:31:56 Anareen kernel: hv_utils: TimeSync IC version 4.0
+Apr 08 15:31:56 Anareen kernel: hv_balloon: Using Dynamic Memory protocol version 2.0
+Apr 08 15:31:56 Anareen kernel: Free page reporting enabled
+Apr 08 15:31:56 Anareen kernel: hv_balloon: Cold memory discard hint enabled with order 9
+Apr 08 15:31:56 Anareen kernel: drop_monitor: Initializing network drop monitor service
+Apr 08 15:31:56 Anareen kernel: NET: Registered PF_INET6 protocol family
+Apr 08 15:31:56 Anareen kernel: Segment Routing with IPv6
+Apr 08 15:31:56 Anareen kernel: In-situ OAM (IOAM) with IPv6
+Apr 08 15:31:56 Anareen kernel: NET: Registered PF_PACKET protocol family
+Apr 08 15:31:56 Anareen kernel: 9pnet: Installing 9P2000 support
+Apr 08 15:31:56 Anareen kernel: NET: Registered PF_VSOCK protocol family
+Apr 08 15:31:56 Anareen kernel: hv_vmbus: registering driver hv_sock
+Apr 08 15:31:56 Anareen kernel: IPI shorthand broadcast: enabled
+Apr 08 15:31:56 Anareen kernel: AVX2 version of gcm_enc/dec engaged.
+Apr 08 15:31:56 Anareen kernel: AES CTR mode by8 optimization enabled
+Apr 08 15:31:56 Anareen kernel: sched_clock: Marking stable (252240423, 3347254)->(283181067, -27593390)
+Apr 08 15:31:56 Anareen kernel: registered taskstats version 1
+Apr 08 15:31:56 Anareen kernel: Loading compiled-in X.509 certificates
+Apr 08 15:31:56 Anareen kernel: ima: No TPM chip found, activating TPM-bypass!
+Apr 08 15:31:56 Anareen kernel: ima: Allocated hash algorithm: sha256
+Apr 08 15:31:56 Anareen kernel: ima: No architecture policies found
+Apr 08 15:31:56 Anareen kernel: RAS: Correctable Errors collector initialized.
+Apr 08 15:31:56 Anareen kernel: clk: Disabling unused clocks
+Apr 08 15:31:56 Anareen kernel: Freeing unused decrypted memory: 2028K
+Apr 08 15:31:56 Anareen kernel: Freeing unused kernel image (initmem) memory: 4492K
+Apr 08 15:31:56 Anareen kernel: Write protecting the kernel read-only data: 34816k
+Apr 08 15:31:56 Anareen kernel: Freeing unused kernel image (rodata/data gap) memory: 840K
+Apr 08 15:31:56 Anareen kernel: Run /init as init process
+Apr 08 15:31:56 Anareen kernel:   with arguments:
+Apr 08 15:31:56 Anareen kernel:     /init
+Apr 08 15:31:56 Anareen kernel:   with environment:
+Apr 08 15:31:56 Anareen kernel:     HOME=/
+Apr 08 15:31:56 Anareen kernel:     TERM=linux
+Apr 08 15:31:56 Anareen kernel:     WSL_ROOT_INIT=1
+Apr 08 15:31:56 Anareen kernel:     WSL_ENABLE_CRASH_DUMP=1
+Apr 08 15:31:56 Anareen kernel: scsi 0:0:0:0: Direct-Access     Msft     Virtual Disk     1.0  PQ: 0 ANSI: 5
+Apr 08 15:31:56 Anareen kernel: scsi 0:0:0:1: Direct-Access     Msft     Virtual Disk     1.0  PQ: 0 ANSI: 5
+Apr 08 15:31:56 Anareen kernel: sd 0:0:0:0: Attached scsi generic sg0 type 0
+Apr 08 15:31:56 Anareen kernel: sd 0:0:0:0: [sda] 795880 512-byte logical blocks: (407 MB/389 MiB)
+Apr 08 15:31:56 Anareen kernel: sd 0:0:0:1: Attached scsi generic sg1 type 0
+Apr 08 15:31:56 Anareen kernel: sd 0:0:0:1: [sdb] 381016 512-byte logical blocks: (195 MB/186 MiB)
+Apr 08 15:31:56 Anareen kernel: sd 0:0:0:0: [sda] Write Protect is on
+Apr 08 15:31:56 Anareen kernel: sd 0:0:0:0: [sda] Mode Sense: 0f 00 80 00
+Apr 08 15:31:56 Anareen kernel: sd 0:0:0:0: [sda] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+Apr 08 15:31:56 Anareen kernel: sd 0:0:0:1: [sdb] Write Protect is on
+Apr 08 15:31:56 Anareen kernel: sd 0:0:0:1: [sdb] Mode Sense: 0f 00 80 00
+Apr 08 15:31:56 Anareen kernel: sd 0:0:0:0: [sda] Attached SCSI disk
+Apr 08 15:31:56 Anareen kernel: sd 0:0:0:1: [sdb] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+Apr 08 15:31:56 Anareen kernel: sd 0:0:0:1: [sdb] Attached SCSI disk
+Apr 08 15:31:56 Anareen kernel: scsi 0:0:0:2: Direct-Access     Msft     Virtual Disk     1.0  PQ: 0 ANSI: 5
+Apr 08 15:31:56 Anareen kernel: sd 0:0:0:2: Attached scsi generic sg2 type 0
+Apr 08 15:31:56 Anareen kernel: sd 0:0:0:2: [sdc] 2097160 512-byte logical blocks: (1.07 GB/1.00 GiB)
+Apr 08 15:31:56 Anareen kernel: sd 0:0:0:2: [sdc] 4096-byte physical blocks
+Apr 08 15:31:56 Anareen kernel: sd 0:0:0:2: [sdc] Write Protect is off
+Apr 08 15:31:56 Anareen kernel: sd 0:0:0:2: [sdc] Mode Sense: 0f 00 00 00
+Apr 08 15:31:56 Anareen kernel: sd 0:0:0:2: [sdc] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+Apr 08 15:31:56 Anareen kernel: sd 0:0:0:2: [sdc] Attached SCSI disk
+Apr 08 15:31:56 Anareen kernel: EXT4-fs (sda): mounted filesystem 00000000-0000-0000-0000-000000000000 ro without journal. Quota mode: none.
+Apr 08 15:31:56 Anareen kernel: EXT4-fs (sdb): mounted filesystem 00000000-0000-0000-0000-000000000000 ro without journal. Quota mode: none.
+Apr 08 15:31:56 Anareen kernel: tun: Universal TUN/TAP device driver, 1.6
+Apr 08 15:31:56 Anareen kernel: bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+Apr 08 15:31:56 Anareen kernel: Adding 1048576k swap on /dev/sdc.  Priority:-2 extents:1 across:1048576k 
+Apr 08 15:31:56 Anareen kernel: Bridge firewalling registered
+Apr 08 15:31:56 Anareen kernel: hv_pci badc1a33-9f10-4139-aa3c-2ae71372ea60: PCI VMBus probing: Using version 0x10004
+Apr 08 15:31:56 Anareen kernel: hv_pci badc1a33-9f10-4139-aa3c-2ae71372ea60: PCI host bridge to bus 9f10:00
+Apr 08 15:31:56 Anareen kernel: pci_bus 9f10:00: root bus resource [mem 0xc00000000-0xe00001fff window]
+Apr 08 15:31:56 Anareen kernel: pci_bus 9f10:00: No busn resource found for root bus, will use [bus 00-ff]
+Apr 08 15:31:56 Anareen kernel: pci 9f10:00:00.0: [1af4:105a] type 00 class 0x088000
+Apr 08 15:31:56 Anareen kernel: pci 9f10:00:00.0: reg 0x10: [mem 0xe00000000-0xe00000fff 64bit]
+Apr 08 15:31:56 Anareen kernel: pci 9f10:00:00.0: reg 0x18: [mem 0xe00001000-0xe00001fff 64bit]
+Apr 08 15:31:56 Anareen kernel: pci 9f10:00:00.0: reg 0x20: [mem 0xc00000000-0xdffffffff 64bit]
+Apr 08 15:31:56 Anareen kernel: pci_bus 9f10:00: busn_res: [bus 00-ff] end is updated to 00
+Apr 08 15:31:56 Anareen kernel: pci 9f10:00:00.0: BAR 4: assigned [mem 0xc00000000-0xdffffffff 64bit]
+Apr 08 15:31:56 Anareen kernel: pci 9f10:00:00.0: BAR 0: assigned [mem 0xe00000000-0xe00000fff 64bit]
+Apr 08 15:31:56 Anareen kernel: pci 9f10:00:00.0: BAR 2: assigned [mem 0xe00001000-0xe00001fff 64bit]
+Apr 08 15:31:56 Anareen kernel: virtio-pci 9f10:00:00.0: enabling device (0000 -> 0002)
+Apr 08 15:31:56 Anareen kernel: virtiofs virtio1: Cache len: 0x200000000 @ 0xc00000000
+Apr 08 15:31:56 Anareen kernel: scsi 0:0:0:3: Direct-Access     Msft     Virtual Disk     1.0  PQ: 0 ANSI: 5
+Apr 08 15:31:56 Anareen kernel: sd 0:0:0:3: Attached scsi generic sg3 type 0
+Apr 08 15:31:56 Anareen kernel: sd 0:0:0:3: [sdd] 2147483648 512-byte logical blocks: (1.10 TB/1.00 TiB)
+Apr 08 15:31:56 Anareen kernel: sd 0:0:0:3: [sdd] 4096-byte physical blocks
+Apr 08 15:31:56 Anareen kernel: sd 0:0:0:3: [sdd] Write Protect is off
+Apr 08 15:31:56 Anareen kernel: sd 0:0:0:3: [sdd] Mode Sense: 0f 00 00 00
+Apr 08 15:31:56 Anareen kernel: sd 0:0:0:3: [sdd] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+Apr 08 15:31:56 Anareen kernel: sd 0:0:0:3: [sdd] Attached SCSI disk
+Apr 08 15:31:56 Anareen kernel: EXT4-fs (sdd): mounted filesystem ac5b060e-049b-443e-a817-d43edc0a261b r/w with ordered data mode. Quota mode: none.
+Apr 08 15:31:56 Anareen kernel: systemd[233]: memfd_create() called without MFD_EXEC or MFD_NOEXEC_SEAL set
+Apr 08 15:31:56 Anareen kernel: misc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22
+Apr 08 15:31:56 Anareen kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Apr 08 15:31:56 Anareen kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Apr 08 15:31:56 Anareen kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Apr 08 15:31:56 Anareen kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+Apr 08 15:31:56 Anareen unknown: Failed to connect to bus: No such file or directory
+Apr 08 15:31:56 Anareen kernel: ACPI: battery: Slot [BAT1] (battery present)
+Apr 08 15:31:56 Anareen kernel: ACPI: AC: AC Adapter [AC1] (on-line)
+Apr 08 15:31:56 Anareen kernel: kvm_intel: Using Hyper-V Enlightened VMCS
+Apr 08 15:31:56 Anareen kernel: Bluetooth: Core ver 2.22
+Apr 08 15:31:56 Anareen kernel: NET: Registered PF_BLUETOOTH protocol family
+Apr 08 15:31:56 Anareen kernel: Bluetooth: HCI device and connection manager initialized
+Apr 08 15:31:56 Anareen kernel: Bluetooth: HCI socket layer initialized
+Apr 08 15:31:56 Anareen kernel: Bluetooth: L2CAP socket layer initialized
+Apr 08 15:31:56 Anareen kernel: Bluetooth: SCO socket layer initialized
+Apr 08 15:31:56 Anareen kernel: intel_rapl_msr: PL4 support detected.
+Apr 08 15:31:57 Anareen kernel: hv_netvsc 82295bbb-3db4-4d00-8326-6da3d30c1f1d eth0: entered promiscuous mode
+Apr 08 15:31:57 Anareen kernel: Initializing XFRM netlink socket
+Apr 08 15:32:09 Anareen unknown: WSL (219) ERROR: CheckConnection: getaddrinfo() failed: -3
+Apr 08 15:32:42 Anareen unknown: WSL (219) ERROR: CheckConnection: getaddrinfo() failed: -3
+Apr 08 15:32:42 Anareen kernel: hv_balloon: Max. dynamic memory size: 3916 MB
+Apr 08 15:41:54 Anareen kernel: mini_init (201): drop_caches: 1
+Apr 08 17:58:29 Anareen unknown: WSL (219) ERROR: CheckConnection: getaddrinfo() failed: -5
+Apr 08 19:45:56 Anareen unknown: WSL (219) ERROR: CheckConnection: getaddrinfo() failed: -5
+Apr 08 19:45:56 Anareen kernel: mini_init (201): drop_caches: 1
+Apr 08 19:49:56 Anareen kernel: mini_init (201): drop_caches: 1
+Apr 09 00:00:11 Anareen kernel: docker0: entered promiscuous mode
+Apr 09 11:56:56 Anareen kernel: mini_init (201): drop_caches: 1
