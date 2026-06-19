@@ -1,0 +1,48 @@
+﻿#include <iostream>
+
+class Node {
+public:
+    int data;
+    Node* next;
+    Node(int val) : data(val), next(nullptr) {}
+};
+
+class LinkedList {
+    Node* head;
+public:
+    LinkedList() {
+        head = nullptr;
+    }
+
+    void append(int value) {
+        Node* newNode = new Node(value);
+        newNode->next = head;
+        head = newNode;
+    }
+
+    void display() {
+        Node* tmp = head;
+        while (tmp) {
+            std::cout << tmp->data << " ";
+            tmp = tmp->next;
+        }
+        std::cout << std::endl;
+    }
+
+
+};
+
+int main() {
+    LinkedList list;
+    
+    list.append(10);
+    list.append(20);
+    list.append(30);
+    list.append(40);
+    list.append(50);
+
+    list.display();
+
+}
+
+

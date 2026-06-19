@@ -13,7 +13,7 @@ public:
     }
 
     void print() const {
-        std::cout << value << " ";
+        std::cout << value << " "<<std::endl;
     }
 
 };
@@ -33,6 +33,11 @@ int main() {
     SafeInt a(10), b(3);
     std::cout << (a <= b) << std::endl;  // 0 (false)
     std::cout << (b <= a) << std::endl;  // 1 (true)
+
+    // a.print();
+    // b.print();
+
+    return 0;
 }
 
 
@@ -43,3 +48,7 @@ OUTPUT:
 1
 
 */
+
+
+
+

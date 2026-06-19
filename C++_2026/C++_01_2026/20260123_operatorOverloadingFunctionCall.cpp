@@ -19,7 +19,7 @@ private:
 public:
     SafeInt(int v = 0) : value(v) {}
     int getValue() const { 
-        return value; 
+        return value;
     }
 
     void setValue(int v) { 
@@ -36,7 +36,7 @@ public:
 
     // EXISTING: * and ->
     SafeInt& operator*() { 
-        return *ptr; 
+        return *ptr;
     }
     
     SafeInt* operator->() { 

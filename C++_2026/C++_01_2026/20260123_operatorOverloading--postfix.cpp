@@ -21,8 +21,18 @@ public:
 int main() {
     Counter c(5);
     Counter prev = c--;  // Calls operator--()
-    c.print();  // Outputs 4
-    prev.print();
+    c.print();  // Outputs: 4
+    prev.print(); // output: 5
 }
+
+
+
+/*
+OUTPUT:
+
+4
+5
+
+*/
 
 

@@ -28,13 +28,18 @@ public:
 
 int main() {
     Base b1;
+    Base b2(27);
     b1.display();  // Value of x = 10
+    b2.display();  // Value of x = 27
 
-   // ++b1;          // Calls operator++()
-   // b1.display();  // x = 11
+    // ++b1;          // Calls operator++()
+    // b1.display();  // x = 11
 
     b1++;
     b1.display();  // Value of x = 11
+
+    b2++;
+    b2.display();  // Value of x = 28
 
     return 0;
 }

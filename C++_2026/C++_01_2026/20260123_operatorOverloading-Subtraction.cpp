@@ -31,10 +31,14 @@ int main() {
     Complex z1(3, 4);   // 3 + 4i
     Complex z2(1, 2);   // 1 + 2i
     Complex z3;
+    Complex z4;
 
     // - creates NEW result
     z3 = z1 - z2;      
-    z3.print();         
+    z3.print();
+
+    z2 += z1;
+    z2.print();
 }
 
 
@@ -42,6 +46,8 @@ int main() {
 OUTPUT:
 
 2 + 2i
+
+4 + 6i
 
 */
 
