@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 
 class Singleton {
  static Singleton* instance;
@@ -6,7 +6,7 @@ class Singleton {
     std::cout << "Singleton instance created." << std::endl;
   }
 public:
-  static Singleton* stance(){
+  static Singleton* getinstance(){
    if(instance == nullptr){
      instance = new Singleton();
    }
