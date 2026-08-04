@@ -20,6 +20,11 @@ int main() {
     std::cout << comp << std::endl;
     std::cout << l << std::endl;
 
+    int cal() {
+        return 0;
+    }
+
+
 }
 
 
