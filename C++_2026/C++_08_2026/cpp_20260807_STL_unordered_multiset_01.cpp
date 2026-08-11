@@ -20,17 +20,17 @@ int main()
     std::cout << "Initial unordered_multiset: ";
     printUnorderedMultiset(ums);
 
-
+    // ----------------------------------------------
     // insert()
     ums.insert(40);
-
+    // ----------------------------------------------
     // emplace()
     ums.emplace(50);
 
     std::cout << "After insert/emplace: ";
     printUnorderedMultiset(ums);
 
-
+    // ----------------------------------------------
     // find()
     auto it = ums.find(30);
 
@@ -38,17 +38,17 @@ int main()
         std::cout << "find(30): "
         << *it << '\n';
 
-
+    // ----------------------------------------------
     // count()
     std::cout << "count(30): "
         << ums.count(30) << '\n';
 
-
+    // ----------------------------------------------
     // contains()
     std::cout << "contains(20): "
         << ums.contains(20) << '\n';
 
-
+    // ----------------------------------------------
     // equal_range()
     auto range = ums.equal_range(30);
 
@@ -59,7 +59,7 @@ int main()
 
     std::cout << '\n';
 
-
+    // ----------------------------------------------
     // erase(iterator)
     it = ums.find(20);
 
@@ -69,39 +69,39 @@ int main()
     std::cout << "After erase(iterator): ";
     printUnorderedMultiset(ums);
 
-
+    // ----------------------------------------------
     // erase(key)
     ums.erase(30);
 
     std::cout << "After erase(30): ";
     printUnorderedMultiset(ums);
 
-
+    // ----------------------------------------------
     // size()
     std::cout << "ums.size(): "
         << ums.size() << '\n';
 
-
+    // ----------------------------------------------
     // empty()
     std::cout << "ums.empty(): "
         << ums.empty() << '\n';
 
-
+    // ----------------------------------------------
     // max_size()
     std::cout << "ums.max_size(): "
         << ums.max_size() << '\n';
 
-
+    // ----------------------------------------------
     // bucket_count()
     std::cout << "bucket_count(): "
         << ums.bucket_count() << '\n';
 
-
+    // ----------------------------------------------
     // load_factor()
     std::cout << "load_factor(): "
         << ums.load_factor() << '\n';
 
-
+    // ----------------------------------------------
     // clear()
     ums.clear();
 
@@ -111,3 +111,25 @@ int main()
 
     return 0;
 }
+
+
+
+/*
+//---------------------------------------------------
+
+
+//---------------------------------------------------
+
+
+//---------------------------------------------------
+
+
+//---------------------------------------------------
+
+
+//---------------------------------------------------
+
+
+*/
+
+

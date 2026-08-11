@@ -7,7 +7,7 @@ int main() {
 
 
 /*
-// --------------------------------------------------
+//---------------------------------------------------
 The main three styles of for loops to remember:
 
 1. Index-based
@@ -19,7 +19,7 @@ The main three styles of for loops to remember:
 3. Range-based
    for (auto value : arr)
 
-// --------------------------------------------------
+//---------------------------------------------------
 is possible:
 
 for (auto value : arr)        // copy
@@ -30,7 +30,7 @@ for (auto& value : arr)
 for (const auto& value : arr) 
                       // reference, cannot modify
 
-// --------------------------------------------------
+//---------------------------------------------------
 Member_function	Returns
 
 begin()	         iterator
@@ -47,7 +47,7 @@ crend()	         const reverse iterator
 
 begin(), end(), etc. are member functions that return iterator objects. They themselves are not iterators.
 
-// --------------------------------------------------
+//---------------------------------------------------
 for std::vector
 
 Function	       What it uses
@@ -58,7 +58,7 @@ operator[]	    index
 erase()	       iterator
 insert()	       iterator
 
-// --------------------------------------------------
+//---------------------------------------------------
 Why iterator for insert() / erase()?
 
 Because these operations are designed to work with positions in a container, and STL uses iterators as the general way to represent positions.
@@ -66,11 +66,11 @@ Because these operations are designed to work with positions in a container, and
 And this distinction becomes even more important when you move from 
 vector to containers that don't have indexes, such as std::list.
 
-// --------------------------------------------------
+//---------------------------------------------------
 
 Iterators are the general STL way of representing positions
 
-// --------------------------------------------------
+//---------------------------------------------------
 
 std::vector
     ↓
@@ -93,7 +93,7 @@ efficient front insertion
     ↓
 efficient back insertion
 
-// --------------------------------------------------
+//---------------------------------------------------
 
 std::deque
     ↓
@@ -112,14 +112,14 @@ restricts the interface
     ↓
 FIFO operations only
 
-// --------------------------------------------------
+//---------------------------------------------------
 std::list
 Notice the important difference:
 
 l[2];        // ❌ operator not available in list 
 l.at(2);     // ❌ at not available in list
 
-// --------------------------------------------------
+//---------------------------------------------------
 std::list
     ↓
 bidirectional iterator
@@ -142,7 +142,7 @@ fl.rbegin();     // ❌
 fl.rend();       // ❌
 fl.size();       // ❌
 
-// -----------------------------------------------
+//---------------------------------------------------
 [] / at()
     array
     vector
@@ -187,20 +187,19 @@ FIFO
 highest-priority-first
     priority_queue
 
-// --------------------------------------------------
+//---------------------------------------------------
 
 
-// --------------------------------------------------
+//---------------------------------------------------
 
 
-// --------------------------------------------------
+//---------------------------------------------------
 
 
-// --------------------------------------------------
+//---------------------------------------------------
 
 
-// --------------------------------------------------
-
+//---------------------------------------------------
 
 
 */

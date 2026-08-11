@@ -30,7 +30,7 @@ int main() {
     std::cout << "v.front() : " << v.front() << '\n';
     std::cout << "v.back()  : " << v.back() << "\n\n";
 
-
+    // ----------------------------------------------
     // data()
     int* ptr = v.data();
 
@@ -58,7 +58,7 @@ int main() {
 
     std::cout << '\n';
 
-
+    // ----------------------------------------------
     // Reverse iterators
     std::cout << "rbegin() -> rend(): ";
 
@@ -67,7 +67,7 @@ int main() {
 
     std::cout << '\n';
 
-
+    // ----------------------------------------------
     // Const iterators
     std::cout << "cbegin() -> cend(): ";
 
@@ -76,7 +76,7 @@ int main() {
 
     std::cout << '\n';
 
-
+    // ----------------------------------------------
     // Const reverse iterators
     std::cout << "crbegin() -> crend(): ";
 
@@ -261,12 +261,14 @@ int main() {
     return 0;
 }
 
+
+
 /*
+//---------------------------------------------------
 // member functions common to array class:
 Member_function	  Description
-    // ----------------------------------------------
 
-//------------------------------------------------
+//---------------------------------------------------
 1.) at()	        Accesses an element with bounds checking
 2.) operator[]	  Accesses an element without bounds checking
 
@@ -275,7 +277,7 @@ Member_function	  Description
 
 5.) data()	     Returns a pointer to the first element
 
-//-----------------------------------
+//---------------------------------------------------
 6.) begin()	     Returns an iterator to the first element
 7.) end()	     Returns an iterator past the last element
 
@@ -288,7 +290,7 @@ Member_function	  Description
 12.) crbegin()	  Returns a const reverse iterator to the last element
 13.) crend()	  Returns a const reverse iterator past the first element
 
-//-----------------------------------
+//---------------------------------------------------
 14.) empty()	  Checks whether the container is empty
 
 15.) size()	     Returns the number of elements
@@ -296,7 +298,7 @@ Member_function	  Description
 
 17.) swap()	     Exchanges the contents of two containers
 
-//-----------------------------------
+//---------------------------------------------------
 // member functions not common to array class:
 
 18.) assign()
@@ -307,19 +309,29 @@ Member_function	  Description
 
 21.) shrink_to_fit()	Requests reduction of unused allocated memory
 
-//-----------------------------------
+//---------------------------------------------------
 22.) push_back()	Adds an element to the end
 23.) pop_back()	Removes the last element
 
-//-----------------------------------
+//---------------------------------------------------
 24.) insert()	   Inserts elements at a specified position
 25.) erase()	   Removes elements from a specified position or range
 26.) clear()	   Removes all elements
 27.) resize()	   Changes the number of elements
 
-//-----------------------------------
+//---------------------------------------------------
 28.) emplace_back()	Constructs and adds an element at the end
 29.) emplace()	   Constructs and inserts an element at a specified position
+
+//---------------------------------------------------
+
+
+//---------------------------------------------------
+
+
+//---------------------------------------------------
+
+
 
 */
 
