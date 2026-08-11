@@ -23,8 +23,12 @@ The main three styles of for loops to remember:
 is possible:
 
 for (auto value : arr)        // copy
-for (auto& value : arr)       // reference, can modify
-for (const auto& value : arr) // reference, cannot modify
+
+for (auto& value : arr)       
+                         // reference, can modify
+
+for (const auto& value : arr) 
+                      // reference, cannot modify
 
 // --------------------------------------------------
 Member_function	Returns
@@ -138,7 +142,7 @@ fl.rbegin();     // ❌
 fl.rend();       // ❌
 fl.size();       // ❌
 
-// --------------------------------------------------
+// -----------------------------------------------
 [] / at()
     array
     vector
@@ -200,3 +204,5 @@ highest-priority-first
 
 
 */
+
+
