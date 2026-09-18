@@ -188,7 +188,38 @@ highest-priority-first
     priority_queue
 
 //---------------------------------------------------
+emplace() vs emplace_back()
 
+Different containers have different emplacement functions:
+
+vector:
+    emplace_back()
+
+deque:
+    emplace_back()
+    emplace_front()
+
+list:
+    emplace()
+    emplace_back()
+    emplace_front()
+
+set:
+    emplace()
+    emplace_hint()
+
+map:
+    emplace()
+    emplace_hint()
+
+stack:
+    emplace()
+
+queue:
+    emplace()
+
+priority_queue:
+    emplace()
 
 //---------------------------------------------------
 
