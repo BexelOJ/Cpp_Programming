@@ -1,16 +1,17 @@
+#include <cstddef>
 #include <iostream>
-#include <map>
+#include <unordered_map>
 #include <string>
 #include <functional>
 
 using namespace std;
 
 //---------------------------------------------------
-// Display map
+// Display unordered_map
 //---------------------------------------------------
-void display(const map<int, string>& m)
+void display(const unordered_map<int, string>& um)
 {
-    for (const auto& [key, value] : m)
+    for (const auto& [key, value] : um)
     {
         cout << key << " -> " << value << "\n";
     }
@@ -25,9 +26,9 @@ int main()
     // 1. Constructors
     //---------------------------------------------------
 
-    map<int, string> m1;
+    unordered_map<int, string> um1;
 
-    map<int, string> m2 =
+    unordered_map<int, string> um2 =
     {
         {30, "Thirty"},
         {10, "Ten"},
@@ -36,23 +37,23 @@ int main()
         {40, "Forty"}
     };
 
-    map<int, string> m3(m2);
+    unordered_map<int, string> um3(um2);
 
-    map<int, string> m4;
+    unordered_map<int, string> um4;
 
-    m4 = m2;
+    um4 = um2;
 
-    cout << "m2\n";
-    display(m2);
+    cout << "um2\n";
+    display(um2);
 
 
     //---------------------------------------------------
-    // 2. Automatic sorting
+    // 2. No automatic sorting
     //---------------------------------------------------
 
-    cout << "\nAutomatic sorting\n";
+    cout << "\nUnordered traversal\n";
 
-    for (const auto& [key, value] : m2)
+    for (const auto& [key, value] : um2)
     {
         cout << key << " -> " << value << "\n";
     }
@@ -64,29 +65,29 @@ int main()
 
     cout << "\noperator[]\n";
 
-    cout << "m2[20] : " << m2[20] << "\n";
+    cout << "um2[20] : " << um2[20] << "\n";
 
 
     //---------------------------------------------------
     // 4. operator[] - insert new key
     //---------------------------------------------------
 
-    m2[60] = "Sixty";
+    um2[60] = "Sixty";
 
-    cout << "\nAfter m2[60] = \"Sixty\"\n";
+    cout << "\nAfter um2[60] = \"Sixty\"\n";
 
-    display(m2);
+    display(um2);
 
 
     //---------------------------------------------------
     // 5. operator[] - modify existing key
     //---------------------------------------------------
 
-    m2[20] = "Twenty Modified";
+    um2[20] = "Twenty Modified";
 
-    cout << "\nAfter modifying m2[20]\n";
+    cout << "\nAfter modifying um2[20]\n";
 
-    display(m2);
+    display(um2);
 
 
     //---------------------------------------------------
@@ -95,14 +96,14 @@ int main()
 
     cout << "\nat()\n";
 
-    cout << "m2.at(30) : " << m2.at(30) << "\n";
+    cout << "um2.at(30) : " << um2.at(30) << "\n";
 
 
     //---------------------------------------------------
     // 7. insert()
     //---------------------------------------------------
 
-    auto result = m2.insert({ 70, "Seventy" });
+    auto result = um2.insert({ 70, "Seventy" });
 
     cout << "\ninsert({70, \"Seventy\"})\n";
 
@@ -119,11 +120,14 @@ int main()
     // 8. Duplicate insert
     //---------------------------------------------------
 
-    auto duplicateResult = m2.insert({ 30, "New Thirty" });
+    auto duplicateResult =
+        um2.insert({ 30, "New Thirty" });
 
     cout << "\nDuplicate insert\n";
 
-    cout << "inserted : " << duplicateResult.second << "\n";
+    cout << "inserted : "
+        << duplicateResult.second
+        << "\n";
 
     cout << "value    : "
         << duplicateResult.first->first
@@ -137,11 +141,13 @@ int main()
     //---------------------------------------------------
 
     auto assignResult =
-        m2.insert_or_assign(30, "Thirty Updated");
+        um2.insert_or_assign(30, "Thirty Updated");
 
     cout << "\ninsert_or_assign(30, \"Thirty Updated\")\n";
 
-    cout << "inserted : " << assignResult.second << "\n";
+    cout << "inserted : "
+        << assignResult.second
+        << "\n";
 
     cout << "value    : "
         << assignResult.first->first
@@ -155,11 +161,13 @@ int main()
     //---------------------------------------------------
 
     auto emplaceResult =
-        m2.try_emplace(80, "Eighty");
+        um2.try_emplace(80, "Eighty");
 
     cout << "\ntry_emplace(80, \"Eighty\")\n";
 
-    cout << "inserted : " << emplaceResult.second << "\n";
+    cout << "inserted : "
+        << emplaceResult.second
+        << "\n";
 
     cout << "value    : "
         << emplaceResult.first->first
@@ -173,11 +181,13 @@ int main()
     //---------------------------------------------------
 
     auto resultEmplace =
-        m2.emplace(90, "Ninety");
+        um2.emplace(90, "Ninety");
 
     cout << "\nemplace(90, \"Ninety\")\n";
 
-    cout << "inserted : " << resultEmplace.second << "\n";
+    cout << "inserted : "
+        << resultEmplace.second
+        << "\n";
 
 
     //---------------------------------------------------
@@ -186,9 +196,9 @@ int main()
 
     cout << "\nfind()\n";
 
-    auto findResult = m2.find(40);
+    auto findResult = um2.find(40);
 
-    if (findResult != m2.end())
+    if (findResult != um2.end())
     {
         cout << "Found : "
             << findResult->first
@@ -208,8 +218,13 @@ int main()
 
     cout << "\ncount()\n";
 
-    cout << "count(40) : " << m2.count(40) << "\n";
-    cout << "count(99) : " << m2.count(99) << "\n";
+    cout << "count(40) : "
+        << um2.count(40)
+        << "\n";
+
+    cout << "count(99) : "
+        << um2.count(99)
+        << "\n";
 
 
     //---------------------------------------------------
@@ -218,8 +233,13 @@ int main()
 
     cout << "\ncontains()\n";
 
-    cout << "contains(40) : " << m2.contains(40) << "\n";
-    cout << "contains(99) : " << m2.contains(99) << "\n";
+    cout << "contains(40) : "
+        << um2.contains(40)
+        << "\n";
+
+    cout << "contains(99) : "
+        << um2.contains(99)
+        << "\n";
 
 
     //---------------------------------------------------
@@ -228,7 +248,9 @@ int main()
 
     cout << "\nempty()\n";
 
-    cout << "empty() : " << m2.empty() << "\n";
+    cout << "empty() : "
+        << um2.empty()
+        << "\n";
 
 
     //---------------------------------------------------
@@ -237,7 +259,9 @@ int main()
 
     cout << "\nsize()\n";
 
-    cout << "size() : " << m2.size() << "\n";
+    cout << "size() : "
+        << um2.size()
+        << "\n";
 
 
     //---------------------------------------------------
@@ -246,7 +270,9 @@ int main()
 
     cout << "\nmax_size()\n";
 
-    cout << "max_size() : " << m2.max_size() << "\n";
+    cout << "max_size() : "
+        << um2.max_size()
+        << "\n";
 
 
     //---------------------------------------------------
@@ -255,166 +281,97 @@ int main()
 
     cout << "\nIterator traversal\n";
 
-    for (auto it = m2.begin(); it != m2.end(); ++it)
+    for (auto it = um2.begin();
+        it != um2.end();
+        ++it)
     {
-        cout << it->first << " -> "
-            << it->second << "\n";
+        cout << it->first
+            << " -> "
+            << it->second
+            << "\n";
     }
 
 
     //---------------------------------------------------
-    // 19. Reverse iterators
-    //---------------------------------------------------
-
-    cout << "\nReverse traversal\n";
-
-    for (auto it = m2.rbegin(); it != m2.rend(); ++it)
-    {
-        cout << it->first << " -> "
-            << it->second << "\n";
-    }
-
-
-    //---------------------------------------------------
-    // 20. Const iterators
+    // 19. Const iterators
     //---------------------------------------------------
 
     cout << "\nConst iterator traversal\n";
 
-    for (auto it = m2.cbegin(); it != m2.cend(); ++it)
+    for (auto it = um2.cbegin();
+        it != um2.cend();
+        ++it)
     {
-        cout << it->first << " -> "
-            << it->second << "\n";
-    }
-
-
-    //---------------------------------------------------
-    // 21. lower_bound()
-    //---------------------------------------------------
-
-    cout << "\nlower_bound()\n";
-
-    auto lower = m2.lower_bound(35);
-
-    if (lower != m2.end())
-    {
-        cout << "lower_bound(35) : "
-            << lower->first
+        cout << it->first
             << " -> "
-            << lower->second
+            << it->second
             << "\n";
     }
 
 
     //---------------------------------------------------
-    // 22. upper_bound()
+    // 20. erase() using key
     //---------------------------------------------------
 
-    cout << "\nupper_bound()\n";
-
-    auto upper = m2.upper_bound(40);
-
-    if (upper != m2.end())
-    {
-        cout << "upper_bound(40) : "
-            << upper->first
-            << " -> "
-            << upper->second
-            << "\n";
-    }
-
-
-    //---------------------------------------------------
-    // 23. equal_range()
-    //---------------------------------------------------
-
-    cout << "\nequal_range()\n";
-
-    auto range = m2.equal_range(40);
-
-    cout << "lower : ";
-
-    if (range.first != m2.end())
-    {
-        cout << range.first->first
-            << " -> "
-            << range.first->second;
-    }
-
-    cout << "\n";
-
-    cout << "upper : ";
-
-    if (range.second != m2.end())
-    {
-        cout << range.second->first
-            << " -> "
-            << range.second->second;
-    }
-
-    cout << "\n";
-
-
-    //---------------------------------------------------
-    // 24. erase() using key
-    //---------------------------------------------------
-
-    size_t erased = m2.erase(20);
+    size_t erased = um2.erase(20);
 
     cout << "\nerase(20)\n";
 
-    cout << "elements erased : " << erased << "\n";
+    cout << "elements erased : "
+        << erased
+        << "\n";
 
-    cout << "map\n";
-    display(m2);
+    cout << "unordered_map\n";
+
+    display(um2);
 
 
     //---------------------------------------------------
-    // 25. erase() using iterator
+    // 21. erase() using iterator
     //---------------------------------------------------
 
-    auto eraseIt = m2.find(30);
+    auto eraseIt = um2.find(30);
 
-    if (eraseIt != m2.end())
+    if (eraseIt != um2.end())
     {
-        m2.erase(eraseIt);
+        um2.erase(eraseIt);
     }
 
     cout << "\nAfter erase(iterator)\n";
 
-    display(m2);
+    display(um2);
 
 
     //---------------------------------------------------
-    // 26. erase() using range
+    // 22. erase() using range
     //---------------------------------------------------
 
-    auto first = m2.begin();
-    auto last = m2.begin();
+    auto first = um2.begin();
+    auto last = um2.begin();
 
-    if (last != m2.end())
+    if (last != um2.end())
     {
         ++last;
     }
 
-    m2.erase(first, last);
+    um2.erase(first, last);
 
     cout << "\nAfter erase(range)\n";
 
-    display(m2);
+    display(um2);
 
 
     //---------------------------------------------------
-    // 27. swap()
+    // 23. swap()
     //---------------------------------------------------
 
-    map<int, string> mapA =
+    unordered_map<int, string> mapA =
     {
         {1, "One"},
         {2, "Two"}
     };
 
-    map<int, string> mapB =
+    unordered_map<int, string> mapB =
     {
         {100, "Hundred"},
         {200, "Two Hundred"}
@@ -440,7 +397,7 @@ int main()
 
 
     //---------------------------------------------------
-    // 28. std::swap()
+    // 24. std::swap()
     //---------------------------------------------------
 
     swap(mapA, mapB);
@@ -455,17 +412,180 @@ int main()
 
 
     //---------------------------------------------------
-    // 29. merge()
+    // 25. Bucket count
     //---------------------------------------------------
 
-    map<int, string> source =
+    cout << "\nbucket_count()\n";
+
+    cout << "bucket_count() : "
+        << um2.bucket_count()
+        << "\n";
+
+
+    //---------------------------------------------------
+    // 26. bucket()
+    //---------------------------------------------------
+
+    cout << "\nbucket()\n";
+
+    if (um2.find(40) != um2.end())
+    {
+        cout << "bucket(40) : "
+            << um2.bucket(40)
+            << "\n";
+    }
+
+
+    //---------------------------------------------------
+    // 27. bucket_size()
+    //---------------------------------------------------
+
+    cout << "\nbucket_size()\n";
+
+    size_t bucket = um2.bucket(40);
+
+    cout << "bucket_size("
+        << bucket
+        << ") : "
+        << um2.bucket_size(bucket)
+        << "\n";
+
+
+    //---------------------------------------------------
+    // 28. Display all buckets
+    //---------------------------------------------------
+
+    cout << "\nAll buckets\n";
+
+    for (size_t i = 0;
+        i < um2.bucket_count();
+        ++i)
+    {
+        cout << "bucket[" << i << "] : ";
+
+        for (auto it = um2.begin(i);
+            it != um2.end(i);
+            ++it)
+        {
+            cout << it->first
+                << " -> "
+                << it->second
+                << " ";
+        }
+
+        cout << "\n";
+    }
+
+
+    //---------------------------------------------------
+    // 29. load_factor()
+    //---------------------------------------------------
+
+    cout << "\nload_factor()\n";
+
+    cout << "load_factor() : "
+        << um2.load_factor()
+        << "\n";
+
+
+    //---------------------------------------------------
+    // 30. max_load_factor()
+    //---------------------------------------------------
+
+    cout << "\nmax_load_factor()\n";
+
+    cout << "max_load_factor() : "
+        << um2.max_load_factor()
+        << "\n";
+
+
+    //---------------------------------------------------
+    // 31. Change max_load_factor
+    //---------------------------------------------------
+
+    um2.max_load_factor(0.5);
+
+    cout << "\nAfter max_load_factor(0.5)\n";
+
+    cout << "max_load_factor() : "
+        << um2.max_load_factor()
+        << "\n";
+
+
+    //---------------------------------------------------
+    // 32. rehash()
+    //---------------------------------------------------
+
+    cout << "\nrehash()\n";
+
+    cout << "Before rehash : "
+        << um2.bucket_count()
+        << " buckets\n";
+
+    um2.rehash(50);
+
+    cout << "After rehash  : "
+        << um2.bucket_count()
+        << " buckets\n";
+
+
+    //---------------------------------------------------
+    // 33. reserve()
+    //---------------------------------------------------
+
+    cout << "\nreserve()\n";
+
+    unordered_map<int, string> reserveMap;
+
+    reserveMap.reserve(100);
+
+    cout << "bucket_count() after reserve(100) : "
+        << reserveMap.bucket_count()
+        << "\n";
+
+
+    //---------------------------------------------------
+    // 34. hash_function()
+    //---------------------------------------------------
+
+    cout << "\nhash_function()\n";
+
+    auto hash = um2.hash_function();
+
+    cout << "hash(40) : "
+        << hash(40)
+        << "\n";
+
+
+    //---------------------------------------------------
+    // 35. key_eq()
+    //---------------------------------------------------
+
+    cout << "\nkey_eq()\n";
+
+    auto keyEqual = um2.key_eq();
+
+    cout << "key_eq(40, 40) : "
+        << keyEqual(40, 40)
+        << "\n";
+
+    cout << "key_eq(40, 50) : "
+        << keyEqual(40, 50)
+        << "\n";
+
+
+    //---------------------------------------------------
+    // 36. merge()
+    //---------------------------------------------------
+
+    unordered_map<int, string> source =
     {
         {3, "Three"},
         {4, "Four"},
         {5, "Five"}
     };
 
-    map<int, string> destination =
+    unordered_map<int, string> destination =
     {
         {1, "One"},
         {2, "Two"},
@@ -484,10 +604,10 @@ int main()
 
 
     //---------------------------------------------------
-    // 30. extract()
+    // 37. extract()
     //---------------------------------------------------
 
-    map<int, string> extractMap =
+    unordered_map<int, string> extractMap =
     {
         {10, "Ten"},
         {20, "Twenty"},
@@ -510,7 +630,7 @@ int main()
 
 
     //---------------------------------------------------
-    // 31. Modify extracted node
+    // 38. Modify extracted node
     //---------------------------------------------------
 
     node.key() = 200;
@@ -523,30 +643,10 @@ int main()
 
 
     //---------------------------------------------------
-    // 32. Custom comparator
+    // 39. Modify mapped value
     //---------------------------------------------------
 
-    map<int, string, greater<int>> descendingMap =
-    {
-        {10, "Ten"},
-        {30, "Thirty"},
-        {20, "Twenty"}
-    };
-
-    cout << "\nDescending map\n";
-
-    for (const auto& [key, value] : descendingMap)
-    {
-        cout << key << " -> "
-            << value << "\n";
-    }
-
-
-    //---------------------------------------------------
-    // 33. Modify mapped value through iterator
-    //---------------------------------------------------
-
-    map<int, string> modifyMap =
+    unordered_map<int, string> modifyMap =
     {
         {1, "One"},
         {2, "Two"},
@@ -566,11 +666,11 @@ int main()
 
 
     //---------------------------------------------------
-    // 34. Key cannot be modified directly
+    // 40. Key cannot be modified directly
     //---------------------------------------------------
 
     /*
-        map element:
+        unordered_map element:
 
             pair<const Key, T>
 
@@ -591,10 +691,10 @@ int main()
 
 
     //---------------------------------------------------
-    // 35. clear()
+    // 41. clear()
     //---------------------------------------------------
 
-    map<int, string> clearMap =
+    unordered_map<int, string> clearMap =
     {
         {1, "One"},
         {2, "Two"},
@@ -605,17 +705,22 @@ int main()
 
     cout << "\nAfter clear()\n";
 
-    cout << "empty() : " << clearMap.empty() << "\n";
-    cout << "size()  : " << clearMap.size() << "\n";
+    cout << "empty() : "
+        << clearMap.empty()
+        << "\n";
+
+    cout << "size()  : "
+        << clearMap.size()
+        << "\n";
 
 
     //---------------------------------------------------
-    // 36. Function summary
+    // 42. Function summary
     //---------------------------------------------------
 
     cout << "\n";
-    cout << "map functions\n";
-    cout << "-------------\n";
+    cout << "unordered_map functions\n";
+    cout << "-----------------------\n";
 
     cout << "empty()\n";
     cout << "size()\n";
@@ -634,10 +739,6 @@ int main()
     cout << "count()\n";
     cout << "contains()\n";
 
-    cout << "lower_bound()\n";
-    cout << "upper_bound()\n";
-    cout << "equal_range()\n";
-
     cout << "erase()\n";
     cout << "clear()\n";
 
@@ -645,12 +746,23 @@ int main()
     cout << "end()\n";
     cout << "cbegin()\n";
     cout << "cend()\n";
-    cout << "rbegin()\n";
-    cout << "rend()\n";
 
     cout << "swap()\n";
     cout << "merge()\n";
     cout << "extract()\n";
+
+    cout << "bucket_count()\n";
+    cout << "bucket_size()\n";
+    cout << "bucket()\n";
+
+    cout << "load_factor()\n";
+    cout << "max_load_factor()\n";
+
+    cout << "rehash()\n";
+    cout << "reserve()\n";
+
+    cout << "hash_function()\n";
+    cout << "key_eq()\n";
 
 
 
@@ -658,68 +770,72 @@ int main()
     return 0;
 }
 
-/*
-//---------------------------------------------------
 
+//---------------------------------------------------
 // Important notes
 //---------------------------------------------------
 
-    map:
+/*
+    unordered_map:
 
         - Stores KEY + VALUE pairs.
         - Keys are UNIQUE.
-        - Keys are automatically SORTED.
-        - Implemented using an ordered tree structure.
+        - Does NOT maintain sorted order.
+        - Uses a hash table.
+
 
     Example:
 
-        map<int, string>
+        unordered_map<int, string>
 
         10 -> Ten
         20 -> Twenty
         30 -> Thirty
 
 
-    Duplicate keys are NOT allowed.
+    Duplicate keys:
 
-        m.insert({10, "Ten"});
-        m.insert({10, "New Ten"});
+        um.insert({10, "Ten"});
+        um.insert({10, "New Ten"});
 
     Second insertion fails.
 
 
     operator[]:
 
-        m[10]
+        um[10]
 
-    If key exists:
-        returns the mapped value.
+    Existing key:
+        returns mapped value.
 
-    If key does NOT exist:
+    New key:
         creates the key with a default value.
 
 
-     at():
+    at():
 
-        m.at(10)
+        um.at(10)
 
-    If key does not exist:
+    Existing key:
+        returns mapped value.
+
+    Missing key:
         throws std::out_of_range.
 
 
     insert_or_assign():
 
         Existing key:
-            updates value.
+            updates the value.
 
         New key:
-            inserts key + value.
+            inserts the key + value.
 
 
     try_emplace():
 
         Existing key:
-            does not overwrite the value.
+            does not overwrite.
 
         New key:
             constructs/inserts the mapped value.
@@ -732,11 +848,53 @@ int main()
         contains()
 
 
-    Ordered operations:
+    Hash-table functions:
 
-        lower_bound()
-        upper_bound()
-        equal_range()
+        bucket_count()
+        bucket_size()
+        bucket()
+        load_factor()
+        max_load_factor()
+        rehash()
+        reserve()
+        hash_function()
+        key_eq()
+
+
+    Important:
+
+        Traversal order is NOT guaranteed.
+
+        It can change after:
+
+            insert()
+            erase()
+            rehash()
+            reserve()
+
+
+    Average complexity:
+
+        Search:
+            O(1)
+
+        Insert:
+            O(1)
+
+        Erase:
+            O(1)
+
+
+    Worst case:
+
+        Search:
+            O(n)
+
+        Insert:
+            O(n)
+
+        Erase:
+            O(n)
 
 
     Key/value:
@@ -755,73 +913,55 @@ int main()
         it->second can be modified.
 
 
-    Time complexity:
-
-        Search:
-            O(log n)
-
-        Insert:
-            O(log n)
-
-        Erase:
-            O(log n)
-
-
-    C++20:
-
-        contains()
-        insert_or_assign()
-        try_emplace()
-
-
     No:
 
-        push_back()
-        push_front()
-        pop_back()
-        pop_front()
+        lower_bound()
+        upper_bound()
+        equal_range()
 
+    Those are ordered-container operations
+    provided by map/multimap.
 
 
 //---------------------------------------------------
 Output:
 //---------------------------------------------------
 
-m2
-10 -> Ten
-20 -> Twenty
-30 -> Thirty
+um2
 40 -> Forty
+20 -> Twenty
 50 -> Fifty
+10 -> Ten
+30 -> Thirty
 
-Automatic sorting
-10 -> Ten
-20 -> Twenty
-30 -> Thirty
+Unordered traversal
 40 -> Forty
+20 -> Twenty
 50 -> Fifty
+10 -> Ten
+30 -> Thirty
 
 operator[]
-m2[20] : Twenty
+um2[20] : Twenty
 
-After m2[60] = "Sixty"
-10 -> Ten
+After um2[60] = "Sixty"
+60 -> Sixty
+40 -> Forty
 20 -> Twenty
-30 -> Thirty
-40 -> Forty
 50 -> Fifty
-60 -> Sixty
-
-After modifying m2[20]
 10 -> Ten
-20 -> Twenty Modified
 30 -> Thirty
-40 -> Forty
-50 -> Fifty
+
+After modifying um2[20]
 60 -> Sixty
+40 -> Forty
+20 -> Twenty Modified
+50 -> Fifty
+10 -> Ten
+30 -> Thirty
 
 at()
-m2.at(30) : Thirty
+um2.at(30) : Thirty
 
 insert({70, "Seventy"})
 inserted : true
@@ -860,141 +1000,162 @@ size()
 size() : 9
 
 max_size()
-max_size() : 256204778801521550
+max_size() : 384307168202282325
 
 Iterator traversal
-10 -> Ten
-20 -> Twenty Modified
-30 -> Thirty Updated
-40 -> Forty
-50 -> Fifty
-60 -> Sixty
-70 -> Seventy
-80 -> Eighty
-90 -> Ninety
-
-Reverse traversal
 90 -> Ninety
 80 -> Eighty
 70 -> Seventy
 60 -> Sixty
-50 -> Fifty
 40 -> Forty
-30 -> Thirty Updated
 20 -> Twenty Modified
+50 -> Fifty
 10 -> Ten
+30 -> Thirty Updated
 
 Const iterator traversal
-10 -> Ten
-20 -> Twenty Modified
-30 -> Thirty Updated
-40 -> Forty
-50 -> Fifty
-60 -> Sixty
-70 -> Seventy
-80 -> Eighty
 90 -> Ninety
-
-lower_bound()
-lower_bound(35) : 40 -> Forty
-
-upper_bound()
-upper_bound(40) : 50 -> Fifty
-
-equal_range()
-lower : 40 -> Forty
-upper : 50 -> Fifty
+80 -> Eighty
+70 -> Seventy
+60 -> Sixty
+40 -> Forty
+20 -> Twenty Modified
+50 -> Fifty
+10 -> Ten
+30 -> Thirty Updated
 
 erase(20)
 elements erased : 1
-map
+unordered_map
+90 -> Ninety
+80 -> Eighty
+70 -> Seventy
+60 -> Sixty
+40 -> Forty
+50 -> Fifty
 10 -> Ten
 30 -> Thirty Updated
-40 -> Forty
-50 -> Fifty
-60 -> Sixty
-70 -> Seventy
-80 -> Eighty
-90 -> Ninety
 
 After erase(iterator)
-10 -> Ten
+90 -> Ninety
+80 -> Eighty
+70 -> Seventy
+60 -> Sixty
 40 -> Forty
 50 -> Fifty
-60 -> Sixty
-70 -> Seventy
-80 -> Eighty
-90 -> Ninety
+10 -> Ten
 
 After erase(range)
+80 -> Eighty
+70 -> Seventy
+60 -> Sixty
 40 -> Forty
 50 -> Fifty
-60 -> Sixty
-70 -> Seventy
-80 -> Eighty
-90 -> Ninety
+10 -> Ten
 
 Before swap()
 mapA
-1 -> One
 2 -> Two
+1 -> One
 mapB
-100 -> Hundred
 200 -> Two Hundred
+100 -> Hundred
 
 After swap()
 mapA
-100 -> Hundred
 200 -> Two Hundred
+100 -> Hundred
 mapB
-1 -> One
 2 -> Two
+1 -> One
 
 After std::swap()
 mapA
-1 -> One
 2 -> Two
+1 -> One
 mapB
-100 -> Hundred
 200 -> Two Hundred
+100 -> Hundred
+
+bucket_count()
+bucket_count() : 13
+
+bucket()
+bucket(40) : 1
+
+bucket_size()
+bucket_size(1) : 1
+
+All buckets
+bucket[0] :
+bucket[1] : 40 -> Forty
+bucket[2] : 80 -> Eighty
+bucket[3] :
+bucket[4] :
+bucket[5] : 70 -> Seventy
+bucket[6] :
+bucket[7] :
+bucket[8] : 60 -> Sixty
+bucket[9] :
+bucket[10] : 10 -> Ten
+bucket[11] : 50 -> Fifty
+bucket[12] :
+
+load_factor()
+load_factor() : 0.461538
+
+max_load_factor()
+max_load_factor() : 1
+
+After max_load_factor(0.5)
+max_load_factor() : 0.5
+
+rehash()
+Before rehash : 13 buckets
+After rehash  : 53 buckets
+
+reserve()
+bucket_count() after reserve(100) : 103
+
+hash_function()
+hash(40) : 40
+
+key_eq()
+key_eq(40, 40) : true
+key_eq(40, 50) : false
 
 After merge()
 destination
-1 -> One
-2 -> Two
-3 -> Existing Three
 4 -> Four
 5 -> Five
+3 -> Existing Three
+2 -> Two
+1 -> One
 source
 3 -> Three
 
 After extract(20)
 Extracted node : 20 -> Twenty
 Remaining map
-10 -> Ten
 30 -> Thirty
+10 -> Ten
 
 After modifying extracted key to 200
-10 -> Ten
-30 -> Thirty
 200 -> Twenty
-
-Descending map
 30 -> Thirty
-20 -> Twenty
 10 -> Ten
 
 After modifying mapped value
-1 -> One
-2 -> TWO
 3 -> Three
+2 -> TWO
+1 -> One
 
 After clear()
 empty() : true
 size()  : 0
 
-map functions
--------------
+unordered_map functions
+-----------------------
 empty()
 size()
 max_size()
@@ -1008,23 +1169,28 @@ emplace_hint()
 find()
 count()
 contains()
-lower_bound()
-upper_bound()
-equal_range()
 erase()
 clear()
 begin()
 end()
 cbegin()
 cend()
-rbegin()
-rend()
 swap()
 merge()
 extract()
+bucket_count()
+bucket_size()
+bucket()
+load_factor()
+max_load_factor()
+rehash()
+reserve()
+hash_function()
+key_eq()
+
+
 
 //---------------------------------------------------
+
 */
-
-
 

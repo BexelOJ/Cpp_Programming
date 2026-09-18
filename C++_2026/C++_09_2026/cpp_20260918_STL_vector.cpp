@@ -1,4 +1,4 @@
-```cpp
+#include <cstddef>
 #include <iostream>
 #include <vector>
 #include <string>
@@ -349,5 +349,108 @@ int main()
 
     return 0;
 }
+
+
+
+/*
+* 
+* What this covers:
+
+Category	       Functions
+
+Construction	vector(), size constructor, fill constructor, initializer-list, copy, range
+Assignment	    operator=
+Assignment	    assign()
+Access	       [], at(), front(), back(), data()
+
+Iterators	        begin(), end(), cbegin(), cend()
+Reverse iterators	  rbegin(), rend(), crbegin(), crend()
+
+Capacity	       empty(), size(), max_size(), capacity()
+Memory	       reserve(), shrink_to_fit()
+
+Add	          push_back(), emplace_back()
+Remove	       pop_back()
+Insert	       insert(), emplace()
+Erase       	 erase()
+Size	          resize()
+Remove all	    clear()
+Exchange	       swap()
+Allocator	    get_allocator()
+Comparison	    ==, !=, <
+
+Non-member	    std::swap()
+
+
+
+//---------------------------------------------------
+ Output:
+//---------------------------------------------------
+v1 :
+v2 : 0 0 0 0 0
+v3 : 100 100 100 100 100
+v4 : 10 20 30 40 50
+v5 : 10 20 30 40 50
+v6 : 10 20 30 40 50
+v7 : 1 2 3 4 5
+After assign(4, 25) : 25 25 25 25
+
+Element Access
+operator[] : 30
+at()       : 30
+front()    : 10
+back()     : 50
+data()     : 0xaaaae4397780
+
+Iterators
+begin() : 10 20 30 40 50
+cbegin() : 10 20 30 40 50
+rbegin() : 50 40 30 20 10
+crbegin() : 50 40 30 20 10
+
+Capacity
+empty()        : 0
+size()         : 5
+max_size()     : 2305843009213693951
+capacity()     : 5
+After reserve(100)
+size()         : 5
+capacity()     : 100
+After shrink_to_fit()
+size()         : 5
+capacity()     : 5
+After push_back(60) : 10 20 30 40 50 60
+After emplace_back(70) : 10 20 30 40 50 60 70
+After pop_back() : 10 20 30 40 50 60
+After insert() : 10 20 25 30 40 50 60
+After inserting 3 copies : 5 5 5 10 20 25 30 40 50 60
+After range insert : 5 5 5 10 20 25 30 40 50 60 100 200 300
+After emplace() : 5 999 5 5 10 20 25 30 40 50 60 100 200 300
+After erase() : 5 5 5 10 20 25 30 40 50 60 100 200 300
+After erase(range) : 5 10 20 25 30 40 50 60 100 200 300
+After resize(5) : 5 10 20 25 30
+After resize(10, 500) : 5 10 20 25 30 500 500 500 500 500
+After clear() :
+size()         : 0
+capacity()     : 20
+
+Before swap()
+a : 1 2 3
+b : 10 20 30 40
+After swap()
+a : 10 20 30 40
+b : 1 2 3
+
+get_allocator() : 500
+
+Comparison
+x == y         : 1
+x != z         : 1
+x < z          : 1
+x after std::swap() : 1 2 4
+z after std::swap() : 1 2 3
+
+*/
+
 
 
