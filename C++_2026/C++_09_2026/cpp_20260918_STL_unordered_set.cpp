@@ -1,4 +1,4 @@
-```cpp
+#include <cstddef>
 #include <iostream>
 #include <unordered_set>
 #include <functional>
@@ -615,6 +615,154 @@ int main()
 //---------------------------------------------------
 Output:
 //---------------------------------------------------
+
+s2 : 20 50 30 10 40
+
+After insert() : 40 20 50 10 30
+
+Duplicate insert
+inserted : false
+value    : 30
+
+emplace(60)
+inserted : true
+set      : 60 40 20 50 10 30
+
+After emplace_hint(70) : 70 60 40 20 50 10 30
+
+Element access using iterator
+begin() : 70
+
+find()
+40 found
+
+count()
+count(40) : 1
+count(99) : 0
+
+contains()
+contains(40) : true
+contains(99) : false
+
+empty()
+empty() : false
+
+size()
+size() : 7
+
+max_size()
+max_size() : 1152921504606846975
+
+Iterator traversal
+begin/end : 70 60 40 20 50 10 30
+
+const_iterator traversal
+cbegin/cend : 70 60 40 20 50 10 30
+
+erase(20)
+elements erased : 1
+set             : 70 60 40 50 10 30
+
+After erase(iterator) : 70 60 40 50 10
+
+After erase(range) : 60 40 50 10
+
+After clear()
+empty() : true
+size()  : 0
+
+Before swap()
+sA : 30 20 10
+sB : 200 100
+
+After swap()
+sA : 200 100
+sB : 30 20 10
+
+After std::swap()
+sA : 30 20 10
+sB : 200 100
+
+bucket_count()
+bucket_count() : 13
+
+bucket()
+bucket(40) : 1
+
+bucket_size()
+bucket_size(1) : 1
+
+All buckets
+bucket[0] :
+bucket[1] : 40
+bucket[2] :
+bucket[3] :
+bucket[4] :
+bucket[5] :
+bucket[6] :
+bucket[7] :
+bucket[8] : 60
+bucket[9] :
+bucket[10] : 10
+bucket[11] : 50
+bucket[12] :
+
+load_factor()
+load_factor() : 0.307692
+
+max_load_factor()
+max_load_factor() : 1
+
+After max_load_factor(0.5)
+max_load_factor() : 0.5
+
+rehash()
+Before rehash : 13 buckets
+After rehash  : 53 buckets
+
+reserve()
+bucket_count() after reserve(100) : 103
+
+hash_function()
+hash(40) : 40
+
+key_eq()
+key_eq(40, 40) : true
+key_eq(40, 50) : false
+
+After merge()
+destination : 60 70 50 20 10
+source      : 50
+
+unordered_set functions
+-----------------------
+empty()
+size()
+max_size()
+insert()
+emplace()
+emplace_hint()
+find()
+count()
+contains()
+erase()
+clear()
+swap()
+begin()
+end()
+cbegin()
+cend()
+bucket_count()
+bucket_size()
+bucket()
+load_factor()
+max_load_factor()
+rehash()
+reserve()
+hash_function()
+key_eq()
+merge()
+
 
 //---------------------------------------------------
 */

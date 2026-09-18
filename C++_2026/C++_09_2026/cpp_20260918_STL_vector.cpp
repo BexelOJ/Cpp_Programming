@@ -353,8 +353,8 @@ int main()
 
 
 /*
-* 
-* What this covers:
+//---------------------------------------------------
+What this covers:
 
 Category	       Functions
 
@@ -380,7 +380,6 @@ Allocator	    get_allocator()
 Comparison	    ==, !=, <
 
 Non-member	    std::swap()
-
 
 
 //---------------------------------------------------
@@ -450,6 +449,8 @@ x < z          : 1
 x after std::swap() : 1 2 4
 z after std::swap() : 1 2 3
 
+
+//-----------------------------------------------
 */
 
 

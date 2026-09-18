@@ -542,7 +542,7 @@ int main()
 
 
 /*
-
+//---------------------------------------------------
 std::list. 
 This one is important 
 because it introduces bidirectional iterators, 
@@ -683,8 +683,8 @@ After clearing list
 empty() : 1
 size()  : 0
 
+
+//-----------------------------------------------
 */
-
-
 
 

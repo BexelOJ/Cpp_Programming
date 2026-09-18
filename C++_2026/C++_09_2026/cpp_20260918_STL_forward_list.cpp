@@ -592,8 +592,8 @@ int main()
 }
 
 
-
 /*
+//---------------------------------------------------
 std::forward_list
 
 This is the singly linked-list container, 
@@ -730,6 +730,8 @@ fl26 <  fl28 : 1
 After clearing forward_list
 empty() : 1
 
+
+//---------------------------------------------------
 */
 
 
