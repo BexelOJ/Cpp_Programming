@@ -1,0 +1,7 @@
+Derived* derivedPtr = dynamic_cast<Derived*>(basePtr);
+
+dynamic_cast
+static_cast
+
+dynamic dispatch
+

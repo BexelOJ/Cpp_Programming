@@ -1,0 +1,27 @@
+----------------------------------------------------
+1. Static Member Variables
+A static member variable is a variable that is shared across all instances of a class. However, because it is static, it is also subject to internal linkage within the class, meaning it is only accessible within the translation unit (the source file) in which it is defined.
+
+Key points about static member variables:
+Defined inside the class: They are declared with the static keyword inside the class, which means they are shared across all instances of that class, but they are still scoped to the translation unit.
+Defined outside the class: They need to be defined outside the class, typically in the corresponding .cpp file.
+--------------------------
+Cannot be accessed with extern across files:
+If you declare a static member variable inside a class, and then define it in a .cpp file, using extern to access it outside the file won't work as expected. This is because the static keyword gives the member internal linkage, meaning it is only visible within the file where it is defined.
+
+----------------------------------------------------
+2. Static Member Functions
+A static member function is a function that is associated with the class itself rather than with any instance of the class. These functions can be called on the class itself, but they don't have access to non-static member variables or functions because they don't have a this pointer.
+
+Key points about static member functions:
+A static member function can be called without an instance of the class.
+It can only access other static members (variables or functions) of the class.
+Static member functions have external linkage in C++, meaning they can be accessed across different files (unlike static variables, which have internal linkage).
+--------------------------
+Can be accessed with extern across files:
+Static member functions can be accessed from other files with extern, as long as they are defined properly.
+
+----------------------------------------------------
+
+
+
